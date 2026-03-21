@@ -10,35 +10,35 @@ const categories = [
   { name: "Amino Asit", href: "/kategori/amino-asit" },
 ];
 
-const links = [
-  { name: "Hakkimizda", href: "/hakkimizda" },
+const pages = [
   { name: "Blog", href: "/blog" },
   { name: "Urun Incelemeleri", href: "/urun-inceleme" },
+  { name: "Hakkimizda", href: "/hakkimizda" },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="border-t border-zinc-200 bg-white">
+      <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
-          <div>
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <span className="text-xl font-bold text-green-400">Supplement</span>
-              <span className="text-xl font-light text-white">Rehberi</span>
+          <div className="md:col-span-2">
+            <Link href="/" className="flex items-baseline gap-1.5 mb-4">
+              <span className="text-lg font-bold tracking-tight text-emerald-600">Supplement</span>
+              <span className="text-lg font-light tracking-tight text-zinc-900">Rehberi</span>
             </Link>
-            <p className="text-sm text-gray-400 leading-6">
-              Supplement dunyasi hakkinda tarafsiz incelemeler, karsilastirmalar ve rehber icerikler.
+            <p className="text-sm text-zinc-500 leading-relaxed max-w-sm">
+              Bilimsel verilere dayali tarafsiz supplement incelemeleri, karsilastirmalar ve rehber icerikler.
             </p>
           </div>
 
           {/* Categories */}
           <div>
-            <h3 className="text-sm font-semibold text-white mb-4">Kategoriler</h3>
-            <ul className="space-y-2">
+            <h3 className="text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-4">Kategoriler</h3>
+            <ul className="space-y-2.5">
               {categories.map((cat) => (
                 <li key={cat.name}>
-                  <Link href={cat.href} className="text-sm text-gray-400 hover:text-green-400 transition-colors">
+                  <Link href={cat.href} className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">
                     {cat.name}
                   </Link>
                 </li>
@@ -46,14 +46,14 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Links */}
+          {/* Pages */}
           <div>
-            <h3 className="text-sm font-semibold text-white mb-4">Sayfalar</h3>
-            <ul className="space-y-2">
-              {links.map((link) => (
-                <li key={link.name}>
-                  <Link href={link.href} className="text-sm text-gray-400 hover:text-green-400 transition-colors">
-                    {link.name}
+            <h3 className="text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-4">Sayfalar</h3>
+            <ul className="space-y-2.5">
+              {pages.map((page) => (
+                <li key={page.name}>
+                  <Link href={page.href} className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">
+                    {page.name}
                   </Link>
                 </li>
               ))}
@@ -62,17 +62,15 @@ export default function Footer() {
         </div>
 
         {/* Affiliate Disclosure */}
-        <div className="mt-8 pt-8 border-t border-gray-800">
-          <p className="text-xs text-gray-500 leading-5">
-            <strong>Affiliate Aciklama:</strong> Bu sitedeki bazi linkler affiliate linklerdir.
+        <div className="mt-16 pt-8 border-t border-zinc-100">
+          <p className="text-xs text-zinc-400 leading-relaxed max-w-2xl">
+            <span className="font-medium text-zinc-500">Affiliate Aciklama:</span> Bu sitedeki bazi linkler affiliate linklerdir.
             Bu linkler uzerinden alisveris yaptiginizda bize komisyon kazandirabilir.
-            Bu durum sizin odediginiz fiyati etkilemez. Tum incelemelerimiz tarafsiz ve
-            bagimsizdir.
+            Tum incelemelerimiz tarafsiz ve bagimsizdir.
           </p>
-        </div>
-
-        <div className="mt-4 text-center text-xs text-gray-500">
-          &copy; {new Date().getFullYear()} Supplement Rehberi. Tum haklari saklidir.
+          <p className="mt-4 text-xs text-zinc-300">
+            &copy; {new Date().getFullYear()} Supplement Rehberi
+          </p>
         </div>
       </div>
     </footer>

@@ -1,39 +1,32 @@
 import Link from "next/link";
+import { HoverLift } from "@/components/MotionWrapper";
 import type { PostMeta } from "@/lib/mdx";
 
 export default function PostCard({ post }: { post: PostMeta }) {
   return (
-    <article className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-      <div className="flex items-center gap-3 mb-3">
-        <span className="text-xs font-medium text-green-600 bg-green-50 px-2 py-1 rounded-full">
-          {post.category}
-        </span>
-        <span className="text-xs text-gray-500">{post.readingTime}</span>
-      </div>
+    <HoverLift className="group">
+      <Link href={`/blog/${post.slug}`} className="block p-6 rounded-2xl border border-zinc-200/80 bg-white hover:border-zinc-300 transition-colors">
+        <div className="flex items-center gap-2.5 mb-3">
+          <span className="text-xs font-medium text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full">
+            {post.category}
+          </span>
+          <span className="text-xs text-zinc-400">{post.readingTime}</span>
+        </div>
 
-      <h3 className="text-lg font-bold text-gray-900 mb-2">
-        <Link href={`/blog/${post.slug}`} className="hover:text-green-600 transition-colors">
+        <h3 className="text-base font-semibold text-zinc-900 mb-2 group-hover:text-emerald-600 transition-colors leading-snug">
           {post.title}
-        </Link>
-      </h3>
+        </h3>
 
-      <p className="text-sm text-gray-600 mb-4 line-clamp-2">{post.description}</p>
+        <p className="text-sm text-zinc-500 leading-relaxed line-clamp-2 mb-4">{post.description}</p>
 
-      <div className="flex items-center justify-between">
-        <time className="text-xs text-gray-500">
+        <time className="text-xs text-zinc-400">
           {new Date(post.date).toLocaleDateString("tr-TR", {
             year: "numeric",
-            month: "long",
+            month: "short",
             day: "numeric",
           })}
         </time>
-        <Link
-          href={`/blog/${post.slug}`}
-          className="text-sm font-medium text-green-600 hover:text-green-700"
-        >
-          Devamini Oku &rarr;
-        </Link>
-      </div>
-    </article>
+      </Link>
+    </HoverLift>
   );
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -48,6 +49,25 @@ export const metadata: Metadata = {
   },
 };
 
+const websiteJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Supplement Rehberi",
+  url: BASE_URL,
+  description:
+    "Protein, kreatin, vitamin ve diger supplementler hakkinda tarafsiz incelemeler, karsilastirmalar ve bilimsel rehberler.",
+  publisher: {
+    "@type": "Organization",
+    name: "Supplement Rehberi",
+    url: BASE_URL,
+  },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: `${BASE_URL}/blog?q={search_term_string}`,
+    "query-input": "required name=search_term_string",
+  },
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -58,7 +78,13 @@ export default function RootLayout({
       lang="tr"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-gray-50">
+      <body className="min-h-full flex flex-col bg-zinc-50">
+        <Script
+          id="website-jsonld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: websiteJsonLd }}
+          strategy="beforeInteractive"
+        />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

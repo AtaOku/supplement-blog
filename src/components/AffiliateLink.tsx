@@ -1,5 +1,7 @@
 "use client";
 
+import { ArrowSquareOut } from "@phosphor-icons/react";
+
 interface AffiliateLinkProps {
   href: string;
   children: React.ReactNode;
@@ -14,7 +16,6 @@ export default function AffiliateLink({
   className = "",
 }: AffiliateLinkProps) {
   const handleClick = () => {
-    // Track affiliate click
     if (typeof window !== "undefined" && "gtag" in window) {
       (window as Record<string, Function>).gtag("event", "affiliate_click", {
         event_category: "affiliate",
@@ -29,13 +30,11 @@ export default function AffiliateLink({
       href={href}
       target="_blank"
       rel="noopener noreferrer nofollow sponsored"
-      className={`inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors ${className}`}
+      className={`inline-flex items-center gap-2 bg-emerald-600 text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-emerald-700 active:scale-[0.98] transition-all duration-150 ${className}`}
       onClick={handleClick}
     >
       {children}
-      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-      </svg>
+      <ArrowSquareOut size={16} weight="bold" />
     </a>
   );
 }

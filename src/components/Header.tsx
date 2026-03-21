@@ -2,72 +2,77 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { List, X } from "@phosphor-icons/react";
 
 const navigation = [
-  { name: "Ana Sayfa", href: "/" },
   { name: "Blog", href: "/blog" },
-  { name: "Urun Incelemeleri", href: "/urun-inceleme" },
-  { name: "Kategoriler", href: "/kategori/protein" },
+  { name: "Incelemeler", href: "/urun-inceleme" },
+  { name: "Kategoriler", href: "/kategori/mitokondri" },
   { name: "Hakkimizda", href: "/hakkimizda" },
 ];
 
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="bg-white border-b border-gray-200">
-      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-2xl font-bold text-green-600">Supplement</span>
-            <span className="text-2xl font-light text-gray-800">Rehberi</span>
+    <header className="sticky top-0 z-50 bg-zinc-50/80 backdrop-blur-xl border-b border-zinc-200/60">
+      <div className="max-w-[1400px] mx-auto px-4 md:px-8">
+        <div className="flex items-center justify-between h-16">
+          <Link href="/" className="flex items-baseline gap-1.5">
+            <span className="text-lg font-bold tracking-tight text-emerald-600">Supplement</span>
+            <span className="text-lg font-light tracking-tight text-zinc-900">Rehberi</span>
           </Link>
 
           {/* Desktop */}
-          <div className="hidden md:flex md:items-center md:gap-8">
+          <nav className="hidden md:flex items-center gap-8">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium text-gray-700 hover:text-green-600 transition-colors"
+                className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors duration-200"
               >
                 {item.name}
               </Link>
             ))}
-          </div>
+          </nav>
 
-          {/* Mobile menu button */}
+          {/* Mobile toggle */}
           <button
-            className="md:hidden p-2 text-gray-600"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden p-2 -mr-2 text-zinc-600 hover:text-zinc-900 transition-colors"
+            onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Menu"
           >
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-              {mobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-              )}
-            </svg>
+            {mobileOpen ? <X size={22} weight="bold" /> : <List size={22} weight="bold" />}
           </button>
         </div>
+      </div>
 
-        {/* Mobile menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden pb-4">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="block py-2 text-base font-medium text-gray-700 hover:text-green-600"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
+      {/* Mobile menu */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.nav
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            className="md:hidden overflow-hidden border-t border-zinc-200/60 bg-zinc-50/95 backdrop-blur-xl"
+          >
+            <div className="px-4 py-4 space-y-1">
+              {[{ name: "Ana Sayfa", href: "/" }, ...navigation].map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="block px-3 py-2.5 text-sm text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100 rounded-lg transition-colors"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </motion.nav>
         )}
-      </nav>
+      </AnimatePresence>
     </header>
   );
 }

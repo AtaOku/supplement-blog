@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fafafa;
+  --foreground: #18181b;
+  --accent: #059669;
+  --accent-light: #d1fae5;
+  --muted: #71717a;
+  --border: #e4e4e7;
 }
 
 @theme inline {
@@ -12,30 +16,43 @@
   --font-mono: var(--font-geist-mono);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: var(--accent-light);
+  color: var(--foreground);
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* MDX Content Styles */
-.prose h1 { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; color: #111; }
-.prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem; color: #111; }
-.prose h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #111; }
-.prose p { margin-bottom: 1rem; line-height: 1.75; color: #374151; }
-.prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
-.prose ol { list-style-type: decimal; padding-left: 1.5rem; margin-bottom: 1rem; }
-.prose li { margin-bottom: 0.5rem; line-height: 1.75; color: #374151; }
-.prose a { color: #16a34a; text-decoration: underline; }
-.prose a:hover { color: #15803d; }
+/* Prose — MDX Content */
+.prose h1 { font-size: 2.25rem; font-weight: 700; letter-spacing: -0.025em; line-height: 1.1; margin-bottom: 1.5rem; color: #18181b; }
+.prose h2 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; margin-top: 2.5rem; margin-bottom: 1rem; color: #18181b; }
+.prose h3 { font-size: 1.125rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; color: #27272a; }
+.prose p { margin-bottom: 1.25rem; line-height: 1.8; color: #3f3f46; max-width: 65ch; }
+.prose ul { list-style-type: disc; padding-left: 1.25rem; margin-bottom: 1.25rem; }
+.prose ol { list-style-type: decimal; padding-left: 1.25rem; margin-bottom: 1.25rem; }
+.prose li { margin-bottom: 0.5rem; line-height: 1.8; color: #3f3f46; }
+.prose a { color: #059669; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
+.prose a:hover { border-bottom-color: #059669; }
 .prose blockquote {
-  border-left: 4px solid #16a34a;
-  padding-left: 1rem;
-  margin: 1.5rem 0;
-  font-style: italic;
-  color: #6b7280;
+  border-left: 2px solid #059669;
+  padding-left: 1.25rem;
+  margin: 2rem 0;
+  color: #52525b;
+  font-style: normal;
 }
-.prose strong { font-weight: 700; color: #111; }
-.prose table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
-.prose th { text-align: left; padding: 0.75rem; background: #f9fafb; border-bottom: 2px solid #e5e7eb; font-weight: 600; }
-.prose td { padding: 0.75rem; border-bottom: 1px solid #e5e7eb; }
+.prose strong { font-weight: 600; color: #18181b; }
+.prose table { width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: 0.875rem; }
+.prose th { text-align: left; padding: 0.75rem 1rem; background: #f4f4f5; border-bottom: 1px solid #e4e4e7; font-weight: 600; color: #27272a; }
+.prose td { padding: 0.75rem 1rem; border-bottom: 1px solid #f4f4f5; color: #3f3f46; }
+.prose tr:last-child td { border-bottom: none; }
+.prose code { font-family: var(--font-mono); font-size: 0.875em; background: #f4f4f5; padding: 0.15em 0.4em; border-radius: 0.25rem; }

@@ -5,6 +5,11 @@ import readingTime from "reading-time";
 
 const contentDirectory = path.join(process.cwd(), "content");
 
+export interface FAQ {
+  question: string;
+  answer: string;
+}
+
 export interface PostMeta {
   slug: string;
   title: string;
@@ -15,6 +20,7 @@ export interface PostMeta {
   image?: string;
   readingTime: string;
   published: boolean;
+  faqs?: FAQ[];
 }
 
 export interface ReviewMeta extends PostMeta {
@@ -77,6 +83,7 @@ export function getPostBySlug(slug: string) {
       image: data.image,
       readingTime: stats.text,
       published: data.published !== false,
+      faqs: data.faqs || undefined,
     } as PostMeta,
     content,
   };
