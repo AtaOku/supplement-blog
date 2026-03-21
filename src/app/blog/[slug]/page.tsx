@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getPostBySlug, getAllPosts } from "@/lib/mdx";
+import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/lib/structured-data";
 import { getBlogHreflang } from "@/lib/hreflang";
 import RelatedPosts from "@/components/RelatedPosts";
 import type { Metadata } from "next";
@@ -44,54 +45,19 @@ export default async function BlogPostPage({ params }: Props) {
   const post = getPostBySlug(slug);
   if (!post) notFound();
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: post.meta.title,
+  const jsonLd = articleJsonLd({
+    title: post.meta.title,
     description: post.meta.description,
-    datePublished: post.meta.date,
-    dateModified: post.meta.date,
+    date: post.meta.date,
     wordCount: post.content.split(/\s+/).length,
-    author: {
-      "@type": "Organization",
-      name: "Supplement Rehberi",
-      url: "https://supplementrehberi.com",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Supplement Rehberi",
-      url: "https://supplementrehberi.com",
-    },
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `https://supplementrehberi.com/blog/${slug}`,
-    },
-  };
+    slug,
+  });
 
-  const breadcrumbLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://supplementrehberi.com",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Blog",
-        item: "https://supplementrehberi.com/blog",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: post.meta.title,
-        item: `https://supplementrehberi.com/blog/${slug}`,
-      },
-    ],
-  };
+  const breadcrumb = breadcrumbJsonLd([
+    { name: "Home", path: "" },
+    { name: "Blog", path: "/blog" },
+    { name: post.meta.title, path: `/blog/${slug}` },
+  ]);
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
@@ -101,22 +67,12 @@ export default async function BlogPostPage({ params }: Props) {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
       />
       {post.meta.faqs && post.meta.faqs.length > 0 && (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              mainEntity: post.meta.faqs.map((faq) => ({
-                "@type": "Question",
-                name: faq.question,
-                acceptedAnswer: { "@type": "Answer", text: faq.answer },
-              })),
-            }),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(post.meta.faqs)) }}
         />
       )}
 
@@ -141,7 +97,7 @@ export default async function BlogPostPage({ params }: Props) {
           </Link>
           <span className="text-sm text-gray-500">{post.meta.readingTime}</span>
           <time className="text-sm text-gray-500">
-            {new Date(post.meta.date).toLocaleDateString("tr-TR", {
+            {new Date(post.meta.date).toLocaleDateString("en-US", {
               year: "numeric",
               month: "long",
               day: "numeric",

@@ -2,6 +2,12 @@
 
 import { ArrowSquareOut } from "@phosphor-icons/react";
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 interface AffiliateLinkProps {
   href: string;
   children: React.ReactNode;
@@ -16,8 +22,8 @@ export default function AffiliateLink({
   className = "",
 }: AffiliateLinkProps) {
   const handleClick = () => {
-    if (typeof window !== "undefined" && "gtag" in window) {
-      (window as Record<string, Function>).gtag("event", "affiliate_click", {
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("event", "affiliate_click", {
         event_category: "affiliate",
         event_label: productName || href,
         transport_type: "beacon",

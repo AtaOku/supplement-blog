@@ -2,6 +2,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getReviewBySlug, getAllReviews } from "@/lib/mdx";
+import { reviewJsonLd, breadcrumbJsonLd } from "@/lib/structured-data";
+import { StarRating } from "@/components/StarRating";
 import AffiliateLink from "@/components/AffiliateLink";
 import RelatedPosts from "@/components/RelatedPosts";
 import { getReviewHreflang } from "@/lib/hreflang";
@@ -39,86 +41,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-function StarRating({ rating }: { rating: number }) {
-  return (
-    <div className="flex items-center gap-1">
-      {[1, 2, 3, 4, 5].map((star) => (
-        <svg
-          key={star}
-          className={`w-6 h-6 ${star <= rating ? "text-yellow-400" : "text-gray-300"}`}
-          fill="currentColor"
-          viewBox="0 0 20 20"
-        >
-          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-        </svg>
-      ))}
-      <span className="text-lg font-bold text-gray-900 ml-2">{rating}/5</span>
-    </div>
-  );
-}
-
 export default async function ReviewPage({ params }: Props) {
   const { slug } = await params;
   const review = getReviewBySlug(slug);
   if (!review) notFound();
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Review",
-    name: review.meta.title,
+  const jsonLd = reviewJsonLd({
+    title: review.meta.title,
     description: review.meta.description,
-    datePublished: review.meta.date,
-    dateModified: review.meta.date,
-    reviewRating: {
-      "@type": "Rating",
-      ratingValue: review.meta.rating,
-      bestRating: 5,
-    },
-    itemReviewed: {
-      "@type": "Product",
-      name: review.meta.productName,
-      brand: { "@type": "Brand", name: review.meta.brand },
-    },
-    author: {
-      "@type": "Organization",
-      name: "Supplement Rehberi",
-      url: "https://supplementrehberi.com",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Supplement Rehberi",
-      url: "https://supplementrehberi.com",
-    },
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `https://supplementrehberi.com/urun-inceleme/${slug}`,
-    },
-  };
+    date: review.meta.date,
+    rating: review.meta.rating,
+    productName: review.meta.productName,
+    brand: review.meta.brand,
+    slug,
+  });
 
-  const breadcrumbLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://supplementrehberi.com",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Reviews",
-        item: "https://supplementrehberi.com/urun-inceleme",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: review.meta.productName,
-        item: `https://supplementrehberi.com/urun-inceleme/${slug}`,
-      },
-    ],
-  };
+  const breadcrumb = breadcrumbJsonLd([
+    { name: "Home", path: "" },
+    { name: "Reviews", path: "/urun-inceleme" },
+    { name: review.meta.productName, path: `/urun-inceleme/${slug}` },
+  ]);
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
@@ -128,7 +70,7 @@ export default async function ReviewPage({ params }: Props) {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
       />
 
       {/* Breadcrumb */}
@@ -202,11 +144,14 @@ export default async function ReviewPage({ params }: Props) {
         <h3 className="text-xl font-bold text-zinc-900 mb-2">
           Get {review.meta.productName}
         </h3>
-        <p className="text-sm text-zinc-500 mb-4">
-          Best price guarantee — order now.
+        <p className="text-sm text-zinc-500 mb-1">
+          Check current pricing and availability.
+        </p>
+        <p className="text-xs text-zinc-400 mb-4 italic">
+          Affiliate link — we may earn a commission at no extra cost to you.
         </p>
         <AffiliateLink href={review.meta.affiliateUrl} productName={review.meta.productName}>
-          Buy Now
+          Check Price
         </AffiliateLink>
       </div>
 

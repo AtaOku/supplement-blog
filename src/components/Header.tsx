@@ -2,15 +2,8 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { List, X } from "@phosphor-icons/react";
-
-const navigation = [
-  { name: "Blog", href: "/blog" },
-  { name: "Reviews", href: "/urun-inceleme" },
-  { name: "Categories", href: "/kategori/mitokondri" },
-  { name: "About", href: "/hakkimizda" },
-];
+import { navigation } from "@/lib/config";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -46,30 +39,22 @@ export default function Header() {
         </div>
       </div>
 
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.nav
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className="md:hidden overflow-hidden border-t border-zinc-200/60 bg-zinc-50/95 backdrop-blur-xl"
-          >
-            <div className="px-4 py-4 space-y-1">
-              {[{ name: "Home", href: "/" }, ...navigation].map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="block px-3 py-2.5 text-sm text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100 rounded-lg transition-colors"
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-          </motion.nav>
-        )}
-      </AnimatePresence>
+      {mobileOpen && (
+        <nav className="md:hidden border-t border-zinc-200/60 bg-zinc-50/95 backdrop-blur-xl animate-fade-in">
+          <div className="px-4 py-4 space-y-1">
+            {[{ name: "Home", href: "/" }, ...navigation].map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                onClick={() => setMobileOpen(false)}
+                className="block px-3 py-2.5 text-sm text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100 rounded-lg transition-colors"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+        </nav>
+      )}
     </header>
   );
 }

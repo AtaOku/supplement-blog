@@ -1,20 +1,5 @@
 import Link from "next/link";
-
-const categories = [
-  { name: "Mitochondria", href: "/kategori/mitokondri" },
-  { name: "Longevity", href: "/kategori/longevity" },
-  { name: "Protein", href: "/kategori/protein" },
-  { name: "Creatine", href: "/kategori/kreatin" },
-  { name: "Vitamins", href: "/kategori/vitamin" },
-  { name: "Pre-Workout", href: "/kategori/pre-workout" },
-  { name: "Amino Acids", href: "/kategori/amino-asit" },
-];
-
-const pages = [
-  { name: "Blog", href: "/blog" },
-  { name: "Product Reviews", href: "/urun-inceleme" },
-  { name: "About", href: "/hakkimizda" },
-];
+import { categories, footerPages } from "@/lib/config";
 
 export default function Footer() {
   return (
@@ -35,8 +20,8 @@ export default function Footer() {
             <h3 className="text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-4">Categories</h3>
             <ul className="space-y-2.5">
               {categories.map((cat) => (
-                <li key={cat.name}>
-                  <Link href={cat.href} className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">
+                <li key={cat.slug}>
+                  <Link href={`/kategori/${cat.slug}`} className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">
                     {cat.name}
                   </Link>
                 </li>
@@ -47,7 +32,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-4">Pages</h3>
             <ul className="space-y-2.5">
-              {pages.map((page) => (
+              {footerPages.map((page) => (
                 <li key={page.name}>
                   <Link href={page.href} className="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">
                     {page.name}

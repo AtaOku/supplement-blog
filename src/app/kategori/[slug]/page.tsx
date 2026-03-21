@@ -1,30 +1,20 @@
 import { getPostsByCategory, getReviewsByCategory } from "@/lib/mdx";
+import { categories, categorySlugToName } from "@/lib/config";
 import PostCard from "@/components/PostCard";
 import ProductCard from "@/components/ProductCard";
 import type { Metadata } from "next";
-
-const categoryNames: Record<string, string> = {
-  mitokondri: "Mitokondri",
-  longevity: "Longevity",
-  protein: "Protein",
-  kreatin: "Kreatin",
-  vitamin: "Vitamin",
-  "pre-workout": "Pre-Workout",
-  "amino-asit": "Amino Asit",
-  saglik: "Saglik",
-};
 
 type Props = {
   params: Promise<{ slug: string }>;
 };
 
 export async function generateStaticParams() {
-  return Object.keys(categoryNames).map((slug) => ({ slug }));
+  return categories.map((c) => ({ slug: c.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const name = categoryNames[slug] || slug;
+  const name = categorySlugToName[slug] || slug;
   return {
     title: `${name} Supplements`,
     description: `Supplement reviews and guides in the ${name} category.`,
@@ -34,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function CategoryPage({ params }: Props) {
   const { slug } = await params;
-  const name = categoryNames[slug] || slug;
+  const name = categorySlugToName[slug] || slug;
   const posts = getPostsByCategory(name);
   const reviews = getReviewsByCategory(name);
 

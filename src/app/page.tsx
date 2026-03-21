@@ -95,8 +95,13 @@ export default function Home() {
                 View all
               </Link>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {posts.map((post) => (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {posts[0] && (
+                <div className="md:col-span-2 md:row-span-2">
+                  <PostCard post={posts[0]} featured />
+                </div>
+              )}
+              {posts.slice(1).map((post) => (
                 <PostCard key={post.slug} post={post} />
               ))}
             </div>

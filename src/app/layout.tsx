@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { BASE_URL, SITE_NAME } from "@/lib/config";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,13 +16,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const BASE_URL = "https://supplementrehberi.com";
-
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Supplement Guide — Science-Based Reviews & Comparisons",
-    template: "%s | Supplement Guide",
+    default: `${SITE_NAME} — Science-Based Reviews & Comparisons`,
+    template: `%s | ${SITE_NAME}`,
   },
   description:
     "Unbiased, science-based supplement reviews, comparisons, and guides. Mitochondrial supplements, protein, creatine, vitamins and more.",
@@ -43,27 +42,28 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "Supplement Guide",
+    siteName: SITE_NAME,
     url: BASE_URL,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${SITE_NAME} — Science-Based Reviews & Comparisons`,
+    description:
+      "Unbiased, science-based supplement reviews, comparisons, and guides.",
   },
 };
 
 const websiteJsonLd = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "Supplement Guide",
+  name: SITE_NAME,
   url: BASE_URL,
   description:
     "Unbiased, science-based supplement reviews, comparisons, and guides.",
   publisher: {
     "@type": "Organization",
-    name: "Supplement Guide",
+    name: SITE_NAME,
     url: BASE_URL,
-  },
-  potentialAction: {
-    "@type": "SearchAction",
-    target: `${BASE_URL}/blog?q={search_term_string}`,
-    "query-input": "required name=search_term_string",
   },
 });
 

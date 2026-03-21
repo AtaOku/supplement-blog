@@ -20,6 +20,7 @@ export interface PostMeta {
   image?: string;
   readingTime: string;
   published: boolean;
+  lang: string;
   faqs?: FAQ[];
 }
 
@@ -59,9 +60,10 @@ export function getAllPosts(): PostMeta[] {
         image: data.image,
         readingTime: stats.text,
         published: data.published !== false,
+        lang: data.lang || "en",
       };
     })
-    .filter((post) => post.published)
+    .filter((post) => post.published && post.lang !== "tr")
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
@@ -83,6 +85,7 @@ export function getPostBySlug(slug: string) {
       image: data.image,
       readingTime: stats.text,
       published: data.published !== false,
+      lang: data.lang || "en",
       faqs: data.faqs || undefined,
     } as PostMeta,
     content,
@@ -109,6 +112,7 @@ export function getAllReviews(): ReviewMeta[] {
         image: data.image,
         readingTime: stats.text,
         published: data.published !== false,
+        lang: data.lang || "en",
         productName: data.productName || "",
         rating: data.rating || 0,
         pros: data.pros || [],
@@ -118,7 +122,7 @@ export function getAllReviews(): ReviewMeta[] {
         brand: data.brand,
       };
     })
-    .filter((review) => review.published)
+    .filter((review) => review.published && review.lang !== "tr")
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
@@ -140,6 +144,7 @@ export function getReviewBySlug(slug: string) {
       image: data.image,
       readingTime: stats.text,
       published: data.published !== false,
+      lang: data.lang || "en",
       productName: data.productName || "",
       rating: data.rating || 0,
       pros: data.pros || [],

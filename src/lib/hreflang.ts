@@ -1,6 +1,7 @@
+import { BASE_URL } from "./config";
+
 // TR-EN blog post mappings for hreflang
 export const blogHreflangMap: Record<string, string> = {
-  // TR slug -> EN slug
   "protein-tozu-rehberi": "protein-powder-guide",
   "kreatin-kulllanim-rehberi": "creatine-guide",
   "mitokondri-sagligi-takviyeler": "mitochondrial-supplements-guide",
@@ -9,12 +10,10 @@ export const blogHreflangMap: Record<string, string> = {
   "nad-nmn-rehberi": "nad-nmn-guide",
 };
 
-// EN slug -> TR slug (reverse mapping)
 export const blogHreflangMapReverse: Record<string, string> = Object.fromEntries(
   Object.entries(blogHreflangMap).map(([tr, en]) => [en, tr])
 );
 
-// TR-EN review mappings for hreflang
 export const reviewHreflangMap: Record<string, string> = {
   "optimum-nutrition-gold-standard-whey": "on-gold-standard-whey-review",
   "kreatin-monohidrat-karsilastirma": "best-creatine-monohydrate",
@@ -26,58 +25,41 @@ export const reviewHreflangMapReverse: Record<string, string> = Object.fromEntri
   Object.entries(reviewHreflangMap).map(([tr, en]) => [en, tr])
 );
 
-const BASE_URL = "https://supplementrehberi.com";
-
-export function getBlogHreflang(slug: string) {
-  const enSlug = blogHreflangMap[slug];
-  const trSlug = blogHreflangMapReverse[slug];
+function resolveHreflang(
+  slug: string,
+  forwardMap: Record<string, string>,
+  reverseMap: Record<string, string>,
+  pathPrefix: string,
+) {
+  const enSlug = forwardMap[slug];
+  const trSlug = reverseMap[slug];
 
   if (enSlug) {
-    // Current is TR, alternate is EN
     return {
-      canonical: `/blog/${slug}`,
+      canonical: `${pathPrefix}/${slug}`,
       languages: {
-        "tr": `${BASE_URL}/blog/${slug}`,
-        "en": `${BASE_URL}/blog/${enSlug}`,
-        "x-default": `${BASE_URL}/blog/${slug}`,
+        tr: `${BASE_URL}${pathPrefix}/${slug}`,
+        en: `${BASE_URL}${pathPrefix}/${enSlug}`,
+        "x-default": `${BASE_URL}${pathPrefix}/${slug}`,
       },
     };
   } else if (trSlug) {
-    // Current is EN, alternate is TR
     return {
-      canonical: `/blog/${slug}`,
+      canonical: `${pathPrefix}/${slug}`,
       languages: {
-        "en": `${BASE_URL}/blog/${slug}`,
-        "tr": `${BASE_URL}/blog/${trSlug}`,
-        "x-default": `${BASE_URL}/blog/${trSlug}`,
+        en: `${BASE_URL}${pathPrefix}/${slug}`,
+        tr: `${BASE_URL}${pathPrefix}/${trSlug}`,
+        "x-default": `${BASE_URL}${pathPrefix}/${trSlug}`,
       },
     };
   }
-  return { canonical: `/blog/${slug}`, languages: undefined };
+  return { canonical: `${pathPrefix}/${slug}`, languages: undefined };
+}
+
+export function getBlogHreflang(slug: string) {
+  return resolveHreflang(slug, blogHreflangMap, blogHreflangMapReverse, "/blog");
 }
 
 export function getReviewHreflang(slug: string) {
-  const enSlug = reviewHreflangMap[slug];
-  const trSlug = reviewHreflangMapReverse[slug];
-
-  if (enSlug) {
-    return {
-      canonical: `/urun-inceleme/${slug}`,
-      languages: {
-        "tr": `${BASE_URL}/urun-inceleme/${slug}`,
-        "en": `${BASE_URL}/urun-inceleme/${enSlug}`,
-        "x-default": `${BASE_URL}/urun-inceleme/${slug}`,
-      },
-    };
-  } else if (trSlug) {
-    return {
-      canonical: `/urun-inceleme/${slug}`,
-      languages: {
-        "en": `${BASE_URL}/urun-inceleme/${slug}`,
-        "tr": `${BASE_URL}/urun-inceleme/${trSlug}`,
-        "x-default": `${BASE_URL}/urun-inceleme/${trSlug}`,
-      },
-    };
-  }
-  return { canonical: `/urun-inceleme/${slug}`, languages: undefined };
+  return resolveHreflang(slug, reviewHreflangMap, reviewHreflangMapReverse, "/urun-inceleme");
 }
