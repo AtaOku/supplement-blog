@@ -7,9 +7,9 @@ import { List, X } from "@phosphor-icons/react";
 
 const navigation = [
   { name: "Blog", href: "/blog" },
-  { name: "Incelemeler", href: "/urun-inceleme" },
-  { name: "Kategoriler", href: "/kategori/mitokondri" },
-  { name: "Hakkimizda", href: "/hakkimizda" },
+  { name: "Reviews", href: "/urun-inceleme" },
+  { name: "Categories", href: "/kategori/mitokondri" },
+  { name: "About", href: "/hakkimizda" },
 ];
 
 export default function Header() {
@@ -21,10 +21,9 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-baseline gap-1.5">
             <span className="text-lg font-bold tracking-tight text-emerald-600">Supplement</span>
-            <span className="text-lg font-light tracking-tight text-zinc-900">Rehberi</span>
+            <span className="text-lg font-light tracking-tight text-zinc-900">Guide</span>
           </Link>
 
-          {/* Desktop */}
           <nav className="hidden md:flex items-center gap-8">
             {navigation.map((item) => (
               <Link
@@ -37,7 +36,6 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Mobile toggle */}
           <button
             className="md:hidden p-2 -mr-2 text-zinc-600 hover:text-zinc-900 transition-colors"
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -48,7 +46,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.nav
@@ -59,7 +56,7 @@ export default function Header() {
             className="md:hidden overflow-hidden border-t border-zinc-200/60 bg-zinc-50/95 backdrop-blur-xl"
           >
             <div className="px-4 py-4 space-y-1">
-              {[{ name: "Ana Sayfa", href: "/" }, ...navigation].map((item) => (
+              {[{ name: "Home", href: "/" }, ...navigation].map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}

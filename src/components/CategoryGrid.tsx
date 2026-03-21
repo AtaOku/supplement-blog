@@ -15,14 +15,14 @@ import type { Icon } from "@phosphor-icons/react";
 import { FadeIn } from "@/components/MotionWrapper";
 
 const categories: { name: string; slug: string; icon: Icon; description: string }[] = [
-  { name: "Mitokondri", slug: "mitokondri", icon: Atom, description: "CoQ10, NAD+, PQQ, taurin" },
+  { name: "Mitochondria", slug: "mitokondri", icon: Atom, description: "CoQ10, NAD+, PQQ, taurine" },
   { name: "Longevity", slug: "longevity", icon: Timer, description: "NMN, resveratrol, anti-aging" },
   { name: "Protein", slug: "protein", icon: Lightning, description: "Whey, casein, vegan protein" },
-  { name: "Kreatin", slug: "kreatin", icon: Fire, description: "Performans ve guc artisi" },
-  { name: "Vitamin", slug: "vitamin", icon: Heartbeat, description: "D3, B12, multivitamin" },
-  { name: "Pre-Workout", slug: "pre-workout", icon: Pill, description: "Antrenman oncesi takviye" },
-  { name: "Amino Asit", slug: "amino-asit", icon: Dna, description: "BCAA, EAA, glutamin" },
-  { name: "Saglik", slug: "saglik", icon: ShieldCheck, description: "Omega-3, probiyotik, mineral" },
+  { name: "Creatine", slug: "kreatin", icon: Fire, description: "Performance and strength" },
+  { name: "Vitamins", slug: "vitamin", icon: Heartbeat, description: "D3, B12, multivitamin" },
+  { name: "Pre-Workout", slug: "pre-workout", icon: Pill, description: "Pre-training supplements" },
+  { name: "Amino Acids", slug: "amino-asit", icon: Dna, description: "BCAA, EAA, glutamine" },
+  { name: "Health", slug: "saglik", icon: ShieldCheck, description: "Omega-3, probiotics, minerals" },
 ];
 
 export default function CategoryGrid() {

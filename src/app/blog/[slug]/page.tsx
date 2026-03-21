@@ -75,7 +75,7 @@ export default async function BlogPostPage({ params }: Props) {
       {
         "@type": "ListItem",
         position: 1,
-        name: "Ana Sayfa",
+        name: "Home",
         item: "https://supplementrehberi.com",
       },
       {
@@ -123,7 +123,7 @@ export default async function BlogPostPage({ params }: Props) {
       {/* Breadcrumb */}
       <nav className="mb-6 text-sm text-gray-500" aria-label="Breadcrumb">
         <ol className="flex items-center gap-1.5">
-          <li><Link href="/" className="hover:text-green-600">Ana Sayfa</Link></li>
+          <li><Link href="/" className="hover:text-green-600">Home</Link></li>
           <li>/</li>
           <li><Link href="/blog" className="hover:text-green-600">Blog</Link></li>
           <li>/</li>

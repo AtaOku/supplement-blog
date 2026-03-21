@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Blog",
-  description: "Supplement dunyasi hakkinda bilimsel ve tarafsiz blog yazilari.",
+  description: "Science-based articles about supplements, mitochondrial health, and longevity.",
   alternates: { canonical: "/blog" },
 };
 
@@ -12,14 +12,14 @@ export default function BlogPage() {
   const posts = getAllPosts();
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">Blog</h1>
-      <p className="text-gray-600 mb-8">
-        Supplement dunyasi hakkinda bilimsel verilere dayali yazilar.
+    <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-12">
+      <h1 className="text-3xl font-bold text-zinc-900 mb-2 tracking-tight">Blog</h1>
+      <p className="text-zinc-500 mb-8">
+        Science-based articles about supplements and health.
       </p>
 
       {posts.length === 0 ? (
-        <p className="text-gray-500 text-center py-12">Henuz blog yazisi bulunmuyor.</p>
+        <p className="text-zinc-400 text-center py-12">No articles yet.</p>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {posts.map((post) => (

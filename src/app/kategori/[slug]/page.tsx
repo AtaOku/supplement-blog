@@ -26,8 +26,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const name = categoryNames[slug] || slug;
   return {
-    title: `${name} - Supplement Rehberi`,
-    description: `${name} kategorisindeki supplement incelemeleri ve rehber yazilar.`,
+    title: `${name} Supplements`,
+    description: `Supplement reviews and guides in the ${name} category.`,
     alternates: { canonical: `/kategori/${slug}` },
   };
 }
@@ -39,15 +39,15 @@ export default async function CategoryPage({ params }: Props) {
   const reviews = getReviewsByCategory(name);
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">{name}</h1>
-      <p className="text-gray-600 mb-8">
-        {name} kategorisindeki tum icerikler.
+    <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-12">
+      <h1 className="text-3xl font-bold text-zinc-900 mb-2 tracking-tight">{name}</h1>
+      <p className="text-zinc-500 mb-8">
+        All content in the {name} category.
       </p>
 
       {reviews.length > 0 && (
         <section className="mb-12">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Urun Incelemeleri</h2>
+          <h2 className="text-xl font-bold text-zinc-900 mb-4 tracking-tight">Product Reviews</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {reviews.map((review) => (
               <ProductCard key={review.slug} review={review} />
@@ -58,7 +58,7 @@ export default async function CategoryPage({ params }: Props) {
 
       {posts.length > 0 && (
         <section>
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Blog Yazilari</h2>
+          <h2 className="text-xl font-bold text-zinc-900 mb-4 tracking-tight">Blog Articles</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {posts.map((post) => (
               <PostCard key={post.slug} post={post} />
@@ -68,8 +68,8 @@ export default async function CategoryPage({ params }: Props) {
       )}
 
       {posts.length === 0 && reviews.length === 0 && (
-        <p className="text-gray-500 text-center py-12">
-          Bu kategoride henuz icerik bulunmuyor.
+        <p className="text-zinc-400 text-center py-12">
+          No content in this category yet.
         </p>
       )}
     </div>

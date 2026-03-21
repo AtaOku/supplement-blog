@@ -24,14 +24,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const hreflang = getReviewHreflang(slug);
 
   return {
-    title: `${review.meta.productName} Inceleme`,
+    title: `${review.meta.productName} Review`,
     description: review.meta.description,
     alternates: {
       canonical: hreflang.canonical,
       languages: hreflang.languages,
     },
     openGraph: {
-      title: `${review.meta.productName} Inceleme`,
+      title: `${review.meta.productName} Review`,
       description: review.meta.description,
       type: "article",
       url: `/urun-inceleme/${slug}`,
@@ -102,13 +102,13 @@ export default async function ReviewPage({ params }: Props) {
       {
         "@type": "ListItem",
         position: 1,
-        name: "Ana Sayfa",
+        name: "Home",
         item: "https://supplementrehberi.com",
       },
       {
         "@type": "ListItem",
         position: 2,
-        name: "Urun Incelemeleri",
+        name: "Reviews",
         item: "https://supplementrehberi.com/urun-inceleme",
       },
       {
@@ -134,9 +134,9 @@ export default async function ReviewPage({ params }: Props) {
       {/* Breadcrumb */}
       <nav className="mb-6 text-sm text-gray-500" aria-label="Breadcrumb">
         <ol className="flex items-center gap-1.5">
-          <li><Link href="/" className="hover:text-green-600">Ana Sayfa</Link></li>
+          <li><Link href="/" className="hover:text-green-600">Home</Link></li>
           <li>/</li>
-          <li><Link href="/urun-inceleme" className="hover:text-green-600">Urun Incelemeleri</Link></li>
+          <li><Link href="/urun-inceleme" className="hover:text-green-600">Reviews</Link></li>
           <li>/</li>
           <li className="text-gray-900 font-medium truncate max-w-xs">{review.meta.productName}</li>
         </ol>
@@ -161,7 +161,7 @@ export default async function ReviewPage({ params }: Props) {
       <div className="bg-gray-50 rounded-xl p-6 mb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <h3 className="font-semibold text-green-700 mb-2">Artilari</h3>
+            <h3 className="font-semibold text-green-700 mb-2">Pros</h3>
             <ul className="space-y-1">
               {review.meta.pros.map((pro) => (
                 <li key={pro} className="flex items-start gap-2 text-sm text-gray-700">
@@ -172,7 +172,7 @@ export default async function ReviewPage({ params }: Props) {
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold text-red-700 mb-2">Eksileri</h3>
+            <h3 className="font-semibold text-red-700 mb-2">Cons</h3>
             <ul className="space-y-1">
               {review.meta.cons.map((con) => (
                 <li key={con} className="flex items-start gap-2 text-sm text-gray-700">
@@ -186,9 +186,9 @@ export default async function ReviewPage({ params }: Props) {
 
         {review.meta.price && (
           <div className="mt-4 pt-4 border-t border-gray-200 flex items-center justify-between">
-            <span className="text-sm text-gray-600">Fiyat: <strong>{review.meta.price}</strong></span>
+            <span className="text-sm text-gray-600">Price: <strong>{review.meta.price}</strong></span>
             <AffiliateLink href={review.meta.affiliateUrl} productName={review.meta.productName}>
-              Fiyati Gor
+              View Price
             </AffiliateLink>
           </div>
         )}
@@ -198,15 +198,15 @@ export default async function ReviewPage({ params }: Props) {
         <MDXRemote source={review.content} />
       </div>
 
-      <div className="mt-12 bg-green-50 rounded-xl p-8 text-center">
-        <h3 className="text-xl font-bold text-gray-900 mb-2">
-          {review.meta.productName} Satin Al
+      <div className="mt-12 bg-emerald-50 rounded-2xl p-8 text-center">
+        <h3 className="text-xl font-bold text-zinc-900 mb-2">
+          Get {review.meta.productName}
         </h3>
-        <p className="text-sm text-gray-600 mb-4">
-          En iyi fiyat garantisi ile hemen siparis verin.
+        <p className="text-sm text-zinc-500 mb-4">
+          Best price guarantee — order now.
         </p>
         <AffiliateLink href={review.meta.affiliateUrl} productName={review.meta.productName}>
-          Satin Al
+          Buy Now
         </AffiliateLink>
       </div>
 

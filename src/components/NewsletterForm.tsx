@@ -27,15 +27,15 @@ export default function NewsletterForm() {
             className="flex items-center gap-3 text-emerald-600"
           >
             <CheckCircle size={24} weight="fill" />
-            <span className="font-medium">Basariyla kaydoldunuz</span>
+            <span className="font-medium">You're subscribed</span>
           </motion.div>
         ) : (
           <motion.div key="form" initial={{ opacity: 1 }} exit={{ opacity: 0 }}>
             <h3 className="text-lg font-semibold text-zinc-900 mb-1 tracking-tight">
-              Bultenimize katil
+              Join our newsletter
             </h3>
             <p className="text-sm text-zinc-500 mb-5">
-              Haftalik supplement tavsiyeleri ve yeni icerikler.
+              Weekly supplement insights and new content.
             </p>
 
             <form onSubmit={handleSubmit} className="flex gap-2">
@@ -43,7 +43,7 @@ export default function NewsletterForm() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="E-posta adresiniz"
+                placeholder="Your email address"
                 required
                 className="flex-1 px-4 py-2.5 bg-zinc-50 border border-zinc-200 rounded-xl text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/40 focus:border-emerald-500 transition-all"
               />
@@ -52,7 +52,7 @@ export default function NewsletterForm() {
                 className="inline-flex items-center gap-2 bg-zinc-900 text-white px-5 py-2.5 rounded-xl text-sm font-medium hover:bg-zinc-800 active:scale-[0.98] transition-all"
               >
                 <PaperPlaneTilt size={16} weight="fill" />
-                Kaydol
+                Subscribe
               </button>
             </form>
           </motion.div>

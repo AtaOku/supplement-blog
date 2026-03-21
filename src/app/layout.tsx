@@ -20,31 +20,30 @@ const BASE_URL = "https://supplementrehberi.com";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Supplement Rehberi - Tarafsiz Supplement Incelemeleri ve Rehberleri",
-    template: "%s | Supplement Rehberi",
+    default: "Supplement Guide — Science-Based Reviews & Comparisons",
+    template: "%s | Supplement Guide",
   },
   description:
-    "Protein, kreatin, vitamin ve diger supplementler hakkinda tarafsiz incelemeler, karsilastirmalar ve bilimsel rehberler.",
+    "Unbiased, science-based supplement reviews, comparisons, and guides. Mitochondrial supplements, protein, creatine, vitamins and more.",
   keywords: [
     "supplement",
-    "protein tozu",
-    "kreatin",
-    "vitamin",
-    "pre-workout",
-    "supplement inceleme",
-    "en iyi protein tozu",
-    "mitokondri takviyesi",
+    "supplement review",
+    "best supplements",
+    "mitochondrial supplements",
     "NMN",
     "CoQ10",
-    "taurin",
+    "taurine",
+    "protein powder",
+    "creatine",
+    "acetyl l-carnitine",
   ],
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
-    locale: "tr_TR",
-    siteName: "Supplement Rehberi",
+    locale: "en_US",
+    siteName: "Supplement Guide",
     url: BASE_URL,
   },
 };
@@ -52,13 +51,13 @@ export const metadata: Metadata = {
 const websiteJsonLd = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "Supplement Rehberi",
+  name: "Supplement Guide",
   url: BASE_URL,
   description:
-    "Protein, kreatin, vitamin ve diger supplementler hakkinda tarafsiz incelemeler, karsilastirmalar ve bilimsel rehberler.",
+    "Unbiased, science-based supplement reviews, comparisons, and guides.",
   publisher: {
     "@type": "Organization",
-    name: "Supplement Rehberi",
+    name: "Supplement Guide",
     url: BASE_URL,
   },
   potentialAction: {
@@ -75,7 +74,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="tr"
+      lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-zinc-50">

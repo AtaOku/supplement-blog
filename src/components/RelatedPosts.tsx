@@ -29,13 +29,13 @@ export default function RelatedPosts({ currentSlug, category, type, limit = 3 }:
     ...crossItems.map((item) => ({
       ...item,
       href: type === "blog" ? `/urun-inceleme/${item.slug}` : `/blog/${item.slug}`,
-      label: `${type === "blog" ? "Inceleme" : "Blog"} \u2022 ${item.category}`,
+      label: `${type === "blog" ? "Review" : "Blog"} \u2022 ${item.category}`,
     })),
   ];
 
   return (
     <div className="mt-16 pt-10 border-t border-zinc-100">
-      <h2 className="text-lg font-semibold text-zinc-900 mb-5 tracking-tight">Ilgili icerikler</h2>
+      <h2 className="text-lg font-semibold text-zinc-900 mb-5 tracking-tight">Related content</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         {allItems.map((item, i) => (
           <FadeIn key={item.slug} delay={i * 0.05}>
