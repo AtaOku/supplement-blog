@@ -19,10 +19,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const categories = await getAllCategories();
   const cat = categories.find((c) => c.slug === slug);
   const name = cat?.name ?? slug;
+  const title = `Best ${name} Supplements — Science-Based Reviews & Dosing Guides`;
+  const description =
+    cat?.description
+      ? cat.description.slice(0, 155)
+      : `Science-backed ${name} supplement reviews, evidence-graded dosing guides, and product comparisons. Find the best ${name} supplements based on clinical research.`;
   return {
-    title: `${name} Supplements`,
-    description: `Supplement reviews and guides in the ${name} category.`,
+    title,
+    description,
     alternates: { canonical: `/category/${slug}` },
+    openGraph: {
+      title,
+      description,
+      type: "website",
+      url: `/category/${slug}`,
+    },
   };
 }
 

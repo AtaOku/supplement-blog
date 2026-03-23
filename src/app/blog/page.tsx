@@ -3,9 +3,17 @@ import PostCard from "@/components/PostCard";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog",
-  description: "Science-based articles about supplements, mitochondrial health, and longevity.",
+  title: "Supplement Science Blog — Evidence-Based Guides & Research Summaries",
+  description:
+    "Read science-backed supplement articles covering performance, longevity, mitochondrial health, and cognitive enhancement. Evidence-graded guides written by sports science researchers.",
   alternates: { canonical: "/blog" },
+  openGraph: {
+    title: "Supplement Science Blog — Evidence-Based Guides & Research Summaries",
+    description:
+      "Read science-backed supplement articles covering performance, longevity, mitochondrial health, and cognitive enhancement. Evidence-graded guides written by sports science researchers.",
+    type: "website",
+    url: "/blog",
+  },
 };
 
 export default function BlogPage() {

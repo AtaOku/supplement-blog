@@ -3,9 +3,17 @@ import ProductCard from "@/components/ProductCard";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Product Reviews",
-  description: "Unbiased supplement product reviews and ratings.",
+  title: "Supplement Reviews — Unbiased Ratings, Ingredient Analysis & Comparisons",
+  description:
+    "Browse independent supplement product reviews with ratings, pros/cons, ingredient analysis, and dosing assessments. Science-based evaluations across creatine, protein, CoQ10, NMN, and more.",
   alternates: { canonical: "/reviews" },
+  openGraph: {
+    title: "Supplement Reviews — Unbiased Ratings, Ingredient Analysis & Comparisons",
+    description:
+      "Browse independent supplement product reviews with ratings, pros/cons, ingredient analysis, and dosing assessments. Science-based evaluations across creatine, protein, CoQ10, NMN, and more.",
+    type: "website",
+    url: "/reviews",
+  },
 };
 
 export default function ReviewsPage() {

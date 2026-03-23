@@ -42,9 +42,17 @@ export function organizationJsonLd() {
     "@type": "Organization",
     name: SITE_NAME,
     url: BASE_URL,
+    logo: `${BASE_URL}/logo.png`,
     description:
       "Independent, science-based supplement resource covering performance, longevity, cognition, and metabolic health.",
-    founder: { "@type": "Person", name: "Ata Okuzcuoglu" },
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "hello@supplementstack.space",
+      contactType: "editorial",
+    },
+    sameAs: [
+      "https://supplementstack.space",
+    ],
   };
 }
 

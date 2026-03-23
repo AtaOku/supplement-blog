@@ -3,10 +3,17 @@ import Link from "next/link";
 import { personJsonLd, organizationJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  title: "About SupplementStack — Our Mission, Methodology & Team",
+  title: "About SupplementStack — Science-Based Supplement Reviews, Editorial Mission & Team",
   description:
-    "SupplementStack is an independent, science-based supplement resource. Learn about our editorial process, review methodology, team credentials, and affiliate disclosure.",
+    "SupplementStack is an independent, science-based supplement resource. Learn about our editorial process, evidence-grading methodology, team credentials, and affiliate disclosure.",
   alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About SupplementStack — Science-Based Supplement Reviews, Editorial Mission & Team",
+    description:
+      "SupplementStack is an independent, science-based supplement resource. Learn about our editorial process, evidence-grading methodology, team credentials, and affiliate disclosure.",
+    type: "website",
+    url: "/about",
+  },
 };
 
 export default function AboutPage() {
