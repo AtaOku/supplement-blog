@@ -1,43 +1,42 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About",
-  description: "About Supplement Guide — our mission and methodology.",
-  alternates: { canonical: "/hakkimizda" },
+  title: "Hakkimizda",
+  description: "Supplement Rehberi hakkinda bilgi.",
 };
 
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
-      <h1 className="text-3xl font-bold text-zinc-900 mb-6 tracking-tight">About</h1>
+      <h1 className="text-3xl font-bold text-gray-900 mb-6">Hakkimizda</h1>
 
       <div className="prose">
         <p>
-          Supplement Guide is an independent platform producing unbiased, science-based
-          content about the supplement industry. Our goal is to help consumers make
-          informed supplement choices.
+          Supplement Rehberi, supplement dunyasinda tarafsiz ve bilimsel verilere dayali
+          icerikler ureten bagimsiz bir platformdur. Amacimiz, tuketicilerin dogru supplement
+          secimi yapmasina yardimci olmaktir.
         </p>
 
-        <h2>Our Mission</h2>
+        <h2>Misyonumuz</h2>
         <p>
-          The supplement market is full of misleading information and exaggerated marketing.
-          We produce unbiased reviews and guides based on scientific research.
+          Supplement pazarinda cok fazla yaniltici bilgi ve abartili pazarlama bulunmaktadir.
+          Biz, bilimsel arastirmalari baz alarak tarafsiz incelemeler ve rehberler sunuyoruz.
         </p>
 
-        <h2>How We Work</h2>
+        <h2>Nasil Calisiyoruz?</h2>
         <ul>
-          <li>We review each product in detail</li>
-          <li>We reference scientific studies</li>
-          <li>We use an unbiased rating system</li>
-          <li>We consider reader feedback</li>
+          <li>Her urunu detayli olarak inceliyoruz</li>
+          <li>Bilimsel calismalara referans veriyoruz</li>
+          <li>Tarafsiz puanlama sistemi kullaniyoruz</li>
+          <li>Okuyucu geri bildirimlerini dikkate aliyoruz</li>
         </ul>
 
-        <h2>Affiliate Disclosure</h2>
+        <h2>Affiliate Aciklama</h2>
         <p>
-          Some links on this site are affiliate links. When you purchase through these
-          links, we may earn a commission. This does not affect the price you pay.
-          All our reviews are unbiased and independent. Affiliate revenue is used to
-          cover the operating costs of this site.
+          Bu sitedeki bazi linkler affiliate linklerdir. Bu linkler uzerinden alisveris
+          yaptiginizda bize komisyon kazandirabilir. Bu durum sizin odediginiz fiyati
+          etkilemez. Tum incelemelerimiz tarafsiz ve bagimsizdir. Affiliate geliri,
+          sitemizin isletme masraflarini karsilamak icin kullanilmaktadir.
         </p>
       </div>
     </div>

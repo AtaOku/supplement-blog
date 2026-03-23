@@ -6,7 +6,7 @@ import type { ReviewMeta } from "@/lib/mdx";
 export default function ProductCard({ review }: { review: ReviewMeta }) {
   return (
     <HoverLift className="group">
-      <Link href={`/urun-inceleme/${review.slug}`} className="block p-6 rounded-2xl border border-zinc-200/80 bg-white hover:border-zinc-300 transition-colors">
+      <Link href={`/reviews/${review.slug}`} className="block p-6 rounded-2xl border border-zinc-200/80 bg-white hover:border-zinc-300 transition-colors">
         <div className="flex items-start justify-between mb-3">
           <span className="text-xs font-medium text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full">
             {review.category}

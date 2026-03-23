@@ -1,14 +1,17 @@
 import Link from "next/link";
-import { getAllPosts, getAllReviews } from "@/lib/mdx";
+import { getAllPosts, getAllReviews, getAllCategories } from "@/lib/sanity-queries";
 import { FadeIn } from "@/components/MotionWrapper";
 import PostCard from "@/components/PostCard";
 import ProductCard from "@/components/ProductCard";
 import NewsletterForm from "@/components/NewsletterForm";
 import CategoryGrid from "@/components/CategoryGrid";
 
-export default function Home() {
-  const posts = getAllPosts().slice(0, 4);
-  const reviews = getAllReviews().slice(0, 3);
+export const revalidate = 3600;
+
+export default async function Home() {
+  const [allPosts, allReviews, categories] = await Promise.all([getAllPosts(), getAllReviews(), getAllCategories()]);
+  const posts = allPosts.slice(0, 4);
+  const reviews = allReviews.slice(0, 3);
 
   return (
     <>
@@ -35,7 +38,7 @@ export default function Home() {
                   Read the Blog
                 </Link>
                 <Link
-                  href="/urun-inceleme"
+                  href="/reviews"
                   className="border border-zinc-200 text-zinc-700 px-6 py-3 rounded-xl text-sm font-medium hover:bg-zinc-50 active:scale-[0.98] transition-all"
                 >
                   Product Reviews
@@ -54,7 +57,7 @@ export default function Home() {
               Categories
             </h2>
           </FadeIn>
-          <CategoryGrid />
+          <CategoryGrid categories={categories} />
         </div>
       </section>
 
@@ -68,7 +71,7 @@ export default function Home() {
                   Latest Reviews
                 </h2>
               </FadeIn>
-              <Link href="/urun-inceleme" className="text-sm text-zinc-400 hover:text-zinc-900 transition-colors">
+              <Link href="/reviews" className="text-sm text-zinc-400 hover:text-zinc-900 transition-colors">
                 View all
               </Link>
             </div>

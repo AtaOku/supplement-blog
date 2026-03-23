@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FadeIn } from "@/components/MotionWrapper";
-import { getAllPosts, getAllReviews } from "@/lib/mdx";
+import { getAllPosts, getAllReviews } from "@/lib/sanity-queries";
 
 type Props = {
   currentSlug: string;
@@ -9,27 +9,29 @@ type Props = {
   limit?: number;
 };
 
-export default function RelatedPosts({ currentSlug, category, type, limit = 3 }: Props) {
+export default async function RelatedPosts({ currentSlug, category, type, limit = 3 }: Props) {
+  const [allPosts, allReviews] = await Promise.all([getAllPosts(), getAllReviews()]);
+
   const items = type === "blog"
-    ? getAllPosts().filter((p) => p.slug !== currentSlug && p.category === category).slice(0, limit)
-    : getAllReviews().filter((r) => r.slug !== currentSlug && r.category === category).slice(0, limit);
+    ? allPosts.filter((p) => p.slug !== currentSlug && p.category === category).slice(0, limit)
+    : allReviews.filter((r) => r.slug !== currentSlug && r.category === category).slice(0, limit);
 
   const crossItems = type === "blog"
-    ? getAllReviews().filter((r) => r.category === category).slice(0, 2)
-    : getAllPosts().filter((p) => p.category === category).slice(0, 2);
+    ? allReviews.filter((r) => r.category === category).slice(0, 2)
+    : allPosts.filter((p) => p.category === category).slice(0, 2);
 
   if (items.length === 0 && crossItems.length === 0) return null;
 
   const allItems = [
     ...items.map((item) => ({
       ...item,
-      href: type === "blog" ? `/blog/${item.slug}` : `/urun-inceleme/${item.slug}`,
+      href: type === "blog" ? `/blog/${item.slug}` : `/reviews/${item.slug}`,
       label: item.category,
     })),
     ...crossItems.map((item) => ({
       ...item,
-      href: type === "blog" ? `/urun-inceleme/${item.slug}` : `/blog/${item.slug}`,
-      label: `${type === "blog" ? "Review" : "Blog"} \u2022 ${item.category}`,
+      href: type === "blog" ? `/reviews/${item.slug}` : `/blog/${item.slug}`,
+      label: `${type === "blog" ? "Review" : "Blog"} • ${item.category}`,
     })),
   ];
 

@@ -29,14 +29,14 @@ export const categorySlugToName: Record<string, string> = Object.fromEntries(
 
 export const navigation = [
   { name: "Blog", href: "/blog" },
-  { name: "Reviews", href: "/urun-inceleme" },
+  { name: "Reviews", href: "/reviews" },
   { name: "Stack Builder", href: "/tools/supplement-stack-builder" },
-  { name: "About", href: "/hakkimizda" },
+  { name: "About", href: "/about" },
 ];
 
 export const footerPages = [
   { name: "Blog", href: "/blog" },
-  { name: "Product Reviews", href: "/urun-inceleme" },
+  { name: "Product Reviews", href: "/reviews" },
   { name: "Free Stack Builder", href: "/tools/supplement-stack-builder" },
-  { name: "About", href: "/hakkimizda" },
+  { name: "About", href: "/about" },
 ];

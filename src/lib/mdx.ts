@@ -21,6 +21,7 @@ export interface PostMeta {
   readingTime: string;
   published: boolean;
   lang: string;
+  categorySlug?: string;
   faqs?: FAQ[];
 }
 

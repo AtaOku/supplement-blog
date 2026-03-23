@@ -2,6 +2,14 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  async redirects() {
+    return [
+      { source: "/urun-inceleme", destination: "/reviews", permanent: true },
+      { source: "/urun-inceleme/:slug", destination: "/reviews/:slug", permanent: true },
+      { source: "/kategori/:slug", destination: "/category/:slug", permanent: true },
+      { source: "/hakkimizda", destination: "/about", permanent: true },
+    ];
+  },
   async headers() {
     return [
       {

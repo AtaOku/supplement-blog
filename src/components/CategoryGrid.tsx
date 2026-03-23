@@ -13,7 +13,6 @@ import {
 } from "@phosphor-icons/react";
 import type { Icon } from "@phosphor-icons/react";
 import { FadeIn } from "@/components/MotionWrapper";
-import { categories } from "@/lib/config";
 
 const categoryIcons: Record<string, Icon> = {
   mitokondri: Atom,
@@ -26,7 +25,13 @@ const categoryIcons: Record<string, Icon> = {
   saglik: ShieldCheck,
 };
 
-export default function CategoryGrid() {
+interface Category {
+  slug: string;
+  name: string;
+  description?: string;
+}
+
+export default function CategoryGrid({ categories }: { categories: Category[] }) {
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
       {categories.map((cat, i) => {
@@ -35,7 +40,7 @@ export default function CategoryGrid() {
         return (
           <FadeIn key={cat.slug} delay={i * 0.04} className={isFeatured ? "md:col-span-2" : ""}>
             <Link
-              href={`/kategori/${cat.slug}`}
+              href={`/category/${cat.slug}`}
               className={`block rounded-2xl border border-zinc-200/80 bg-white hover:border-emerald-300 transition-all group ${isFeatured ? "p-7" : "p-5"}`}
             >
               <IconComponent

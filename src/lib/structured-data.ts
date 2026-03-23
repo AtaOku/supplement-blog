@@ -6,6 +6,48 @@ const org = {
   url: BASE_URL,
 };
 
+const author = {
+  "@type": "Person",
+  name: "Ata Okuzcuoglu",
+  url: `${BASE_URL}/about`,
+  sameAs: [`${BASE_URL}/about`],
+  jobTitle: "Founder & Lead Writer",
+  description:
+    "Sports science background with 8+ years following primary literature in exercise science, clinical nutrition, and longevity biology.",
+};
+
+export function personJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Ata Okuzcuoglu",
+    url: `${BASE_URL}/about`,
+    jobTitle: "Founder & Lead Writer",
+    worksFor: { "@type": "Organization", name: SITE_NAME, url: BASE_URL },
+    description:
+      "Sports science background with 8+ years following primary literature in exercise science, clinical nutrition, and longevity biology.",
+    knowsAbout: [
+      "Longevity Supplements",
+      "Evidence-Based Nutrition",
+      "Mitochondrial Medicine",
+      "Exercise Science",
+      "Sports Nutrition",
+    ],
+  };
+}
+
+export function organizationJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: SITE_NAME,
+    url: BASE_URL,
+    description:
+      "Independent, science-based supplement resource covering performance, longevity, cognition, and metabolic health.",
+    founder: { "@type": "Person", name: "Ata Okuzcuoglu" },
+  };
+}
+
 export function articleJsonLd(post: {
   title: string;
   description: string;
@@ -21,7 +63,7 @@ export function articleJsonLd(post: {
     datePublished: post.date,
     dateModified: post.date,
     wordCount: post.wordCount,
-    author: org,
+    author: author,
     publisher: org,
     mainEntityOfPage: {
       "@type": "WebPage",
@@ -56,11 +98,11 @@ export function reviewJsonLd(review: {
       name: review.productName,
       brand: review.brand ? { "@type": "Brand", name: review.brand } : undefined,
     },
-    author: org,
+    author: author,
     publisher: org,
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${BASE_URL}/urun-inceleme/${review.slug}`,
+      "@id": `${BASE_URL}/reviews/${review.slug}`,
     },
   };
 }

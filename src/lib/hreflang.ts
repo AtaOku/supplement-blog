@@ -35,21 +35,23 @@ function resolveHreflang(
   const trSlug = reverseMap[slug];
 
   if (enSlug) {
+    // This is a TR slug — canonical is TR, x-default points to EN
     return {
       canonical: `${pathPrefix}/${slug}`,
       languages: {
         tr: `${BASE_URL}${pathPrefix}/${slug}`,
         en: `${BASE_URL}${pathPrefix}/${enSlug}`,
-        "x-default": `${BASE_URL}${pathPrefix}/${slug}`,
+        "x-default": `${BASE_URL}${pathPrefix}/${enSlug}`,
       },
     };
   } else if (trSlug) {
+    // This is an EN slug — canonical is EN, x-default points to EN
     return {
       canonical: `${pathPrefix}/${slug}`,
       languages: {
         en: `${BASE_URL}${pathPrefix}/${slug}`,
         tr: `${BASE_URL}${pathPrefix}/${trSlug}`,
-        "x-default": `${BASE_URL}${pathPrefix}/${trSlug}`,
+        "x-default": `${BASE_URL}${pathPrefix}/${slug}`,
       },
     };
   }
@@ -61,5 +63,5 @@ export function getBlogHreflang(slug: string) {
 }
 
 export function getReviewHreflang(slug: string) {
-  return resolveHreflang(slug, reviewHreflangMap, reviewHreflangMapReverse, "/urun-inceleme");
+  return resolveHreflang(slug, reviewHreflangMap, reviewHreflangMapReverse, "/reviews");
 }
