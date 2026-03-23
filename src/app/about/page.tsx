@@ -48,8 +48,8 @@ export default function AboutPage() {
               👤
             </div>
             <div>
-              <p className="font-semibold text-zinc-900 text-base mb-0.5">Ata Okuzcuoglu</p>
-              <p className="text-sm text-zinc-500 mb-2">Founder &amp; Lead Writer</p>
+              <p className="font-semibold text-zinc-900 text-base mb-0.5">Ryan Holt</p>
+              <p className="text-sm text-zinc-500 mb-2">Lead Science Writer</p>
               <p className="text-sm text-zinc-700">
                 Sports science background with a focus on evidence-based nutrition and longevity
                 biology. Has followed primary literature in exercise science and clinical nutrition

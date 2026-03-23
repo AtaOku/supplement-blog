@@ -8,10 +8,10 @@ const org = {
 
 const author = {
   "@type": "Person",
-  name: "Ata Okuzcuoglu",
+  name: "Ryan Holt",
   url: `${BASE_URL}/about`,
   sameAs: [`${BASE_URL}/about`],
-  jobTitle: "Founder & Lead Writer",
+  jobTitle: "Lead Science Writer",
   description:
     "Sports science background with 8+ years following primary literature in exercise science, clinical nutrition, and longevity biology.",
 };
@@ -20,9 +20,9 @@ export function personJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Ata Okuzcuoglu",
+    name: "Ryan Holt",
     url: `${BASE_URL}/about`,
-    jobTitle: "Founder & Lead Writer",
+    jobTitle: "Lead Science Writer",
     worksFor: { "@type": "Organization", name: SITE_NAME, url: BASE_URL },
     description:
       "Sports science background with 8+ years following primary literature in exercise science, clinical nutrition, and longevity biology.",

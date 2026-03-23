@@ -11,9 +11,6 @@ export default function ProductCard({ review }: { review: ReviewMeta }) {
           <span className="text-xs font-medium text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full">
             {review.category}
           </span>
-          {review.price && (
-            <span className="text-xs font-semibold text-zinc-900 bg-zinc-100 px-2.5 py-1 rounded-full">{review.price}</span>
-          )}
         </div>
 
         <h3 className="text-base font-semibold text-zinc-900 mb-2 group-hover:text-emerald-600 transition-colors leading-snug">

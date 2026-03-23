@@ -118,13 +118,13 @@ export default async function BlogPostPage({ params }: Props) {
         <p className="mt-4 text-lg text-gray-600">{post.description}</p>
         <div className="mt-6 flex items-center gap-3 border-t border-gray-100 pt-5">
           <div className="w-9 h-9 rounded-full bg-green-100 flex items-center justify-center text-green-700 font-semibold text-sm shrink-0">
-            AO
+            RH
           </div>
           <div>
             <Link href="/about" className="text-sm font-medium text-gray-900 hover:text-green-600">
-              Ata Okuzcuoglu
+              Ryan Holt
             </Link>
-            <p className="text-xs text-gray-500">Founder &amp; Lead Writer · Sports Science · Longevity Biology</p>
+            <p className="text-xs text-gray-500">Lead Science Writer · Sports Science · Longevity Biology</p>
           </div>
         </div>
       </div>
