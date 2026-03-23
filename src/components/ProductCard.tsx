@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { HoverLift } from "@/components/MotionWrapper";
 import { StarRating } from "@/components/StarRating";
-import type { ReviewMeta } from "@/lib/mdx";
+import type { ReviewMeta } from "@/lib/sanity-queries";
 
 export default function ProductCard({ review }: { review: ReviewMeta }) {
   return (

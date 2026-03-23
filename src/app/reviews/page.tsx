@@ -1,6 +1,8 @@
-import { getAllReviews } from "@/lib/mdx";
+import { getAllReviews } from "@/lib/sanity-queries";
 import ProductCard from "@/components/ProductCard";
 import type { Metadata } from "next";
+
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Supplement Reviews — Unbiased Ratings, Ingredient Analysis & Comparisons",
@@ -16,8 +18,8 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ReviewsPage() {
-  const reviews = getAllReviews();
+export default async function ReviewsPage() {
+  const reviews = await getAllReviews();
 
   return (
     <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-12">

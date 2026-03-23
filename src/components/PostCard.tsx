@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { HoverLift } from "@/components/MotionWrapper";
-import type { PostMeta } from "@/lib/mdx";
+import type { PostMeta } from "@/lib/sanity-queries";
 
 export default function PostCard({ post, featured = false }: { post: PostMeta; featured?: boolean }) {
   return (

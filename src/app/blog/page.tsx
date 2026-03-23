@@ -1,6 +1,8 @@
-import { getAllPosts } from "@/lib/mdx";
+import { getAllPosts } from "@/lib/sanity-queries";
 import PostCard from "@/components/PostCard";
 import type { Metadata } from "next";
+
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Supplement Science Blog — Evidence-Based Guides & Research Summaries",
@@ -16,8 +18,8 @@ export const metadata: Metadata = {
   },
 };
 
-export default function BlogPage() {
-  const posts = getAllPosts();
+export default async function BlogPage() {
+  const posts = await getAllPosts();
 
   return (
     <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-12">

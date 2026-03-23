@@ -1,9 +1,38 @@
 import { client } from "@/sanity/client";
-import type { FAQ, PostMeta, ReviewMeta } from "./mdx";
 
 // ---------------------------------------------------------------------------
 // Types
 // ---------------------------------------------------------------------------
+
+export interface FAQ {
+  question: string;
+  answer: string;
+}
+
+export interface PostMeta {
+  slug: string;
+  title: string;
+  description: string;
+  date: string;
+  category: string;
+  tags: string[];
+  image?: string;
+  readingTime: string;
+  published: boolean;
+  lang: string;
+  categorySlug?: string;
+  faqs?: FAQ[];
+}
+
+export interface ReviewMeta extends PostMeta {
+  productName: string;
+  rating: number;
+  pros: string[];
+  cons: string[];
+  affiliateUrl: string;
+  price?: string;
+  brand?: string;
+}
 
 export interface SanityCategory {
   _id: string;
