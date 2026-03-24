@@ -1,7 +1,9 @@
 import Link from "next/link";
-import { categories, footerPages } from "@/lib/config";
+import { footerPages } from "@/lib/config";
+import { getAllCategories } from "@/lib/notion-queries";
 
-export default function Footer() {
+export default async function Footer() {
+  const categories = await getAllCategories().catch(() => []);
   return (
     <footer className="border-t border-zinc-200 bg-white">
       <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-16">
@@ -12,12 +14,12 @@ export default function Footer() {
               <span className="text-lg font-light tracking-tight text-zinc-900">Guide</span>
             </Link>
             <p className="text-sm text-zinc-500 leading-relaxed max-w-sm">
-              Unbiased, science-based supplement reviews, comparisons, and guides.
+              Independent, science-based supplement research. Every claim backed by peer-reviewed evidence.
             </p>
           </div>
 
           <div>
-            <h3 className="text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-4">Categories</h3>
+            <h3 className="text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-4">Topics</h3>
             <ul className="space-y-2.5">
               {categories.map((cat) => (
                 <li key={cat.slug}>
@@ -45,9 +47,8 @@ export default function Footer() {
 
         <div className="mt-16 pt-8 border-t border-zinc-100">
           <p className="text-xs text-zinc-400 leading-relaxed max-w-2xl">
-            <span className="font-medium text-zinc-500">Affiliate Disclosure:</span> Some links on this site are affiliate links.
-            When you purchase through these links, we may earn a commission at no extra cost to you.
-            All reviews are unbiased and independent.
+            All content is independently researched. We cite primary sources from PubMed,
+            peer-reviewed journals, and systematic reviews. No affiliate relationships influence our evaluations.
           </p>
           <p className="mt-4 text-xs text-zinc-300">
             &copy; {new Date().getFullYear()} Supplement Guide

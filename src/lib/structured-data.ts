@@ -75,42 +75,7 @@ export function articleJsonLd(post: {
     publisher: org,
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${BASE_URL}/blog/${post.slug}`,
-    },
-  };
-}
-
-export function reviewJsonLd(review: {
-  title: string;
-  description: string;
-  date: string;
-  rating: number;
-  productName: string;
-  brand?: string;
-  slug: string;
-}) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Review",
-    name: review.title,
-    description: review.description,
-    datePublished: review.date,
-    dateModified: review.date,
-    reviewRating: {
-      "@type": "Rating",
-      ratingValue: review.rating,
-      bestRating: 5,
-    },
-    itemReviewed: {
-      "@type": "Product",
-      name: review.productName,
-      brand: review.brand ? { "@type": "Brand", name: review.brand } : undefined,
-    },
-    author: author,
-    publisher: org,
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `${BASE_URL}/reviews/${review.slug}`,
+      "@id": `${BASE_URL}/${post.slug}`,
     },
   };
 }

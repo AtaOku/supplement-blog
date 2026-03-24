@@ -1,37 +1,46 @@
-import { revalidatePath, revalidateTag } from "next/cache";
+import { revalidatePath } from "next/cache";
 import { NextRequest, NextResponse } from "next/server";
+import crypto from "crypto";
 
-// Sanity webhook → on-demand ISR revalidation
-// Called automatically when content is published/updated in Sanity Studio
+// On-demand revalidation endpoint
+// Can be triggered manually or via automation (e.g., Notion webhook, cron)
 export async function POST(req: NextRequest) {
-  const secret = req.nextUrl.searchParams.get("secret");
+  const secret = req.nextUrl.searchParams.get("secret") ?? "";
+  const expected = process.env.REVALIDATE_SECRET ?? "";
 
-  if (secret !== process.env.REVALIDATE_SECRET) {
+  if (
+    !expected ||
+    secret.length !== expected.length ||
+    !crypto.timingSafeEqual(Buffer.from(secret), Buffer.from(expected))
+  ) {
     return NextResponse.json({ message: "Invalid secret" }, { status: 401 });
   }
 
   try {
-    const body = await req.json();
-    const { _type, slug } = body;
+    const body = await req.json().catch(() => ({}));
+    const paths = (body.paths as string[]) ?? [];
 
-    // Always revalidate sitemap
+    // Always revalidate core pages
+    revalidatePath("/");
     revalidatePath("/sitemap.xml");
+    revalidatePath("/blog");
+    revalidatePath("/research");
 
-    if (_type === "post") {
-      revalidatePath("/blog");
-      if (slug?.current) revalidatePath(`/blog/${slug.current}`);
-    } else if (_type === "review") {
-      revalidatePath("/reviews");
-      if (slug?.current) revalidatePath(`/reviews/${slug.current}`);
-    } else if (_type === "category") {
-      if (slug?.current) revalidatePath(`/category/${slug.current}`);
+    // Revalidate specific paths if provided
+    for (const p of paths) {
+      if (typeof p === "string" && p.startsWith("/")) {
+        revalidatePath(p);
+      }
     }
 
-    // Revalidate homepage and category index for any content change
-    revalidatePath("/");
-
-    return NextResponse.json({ revalidated: true, type: _type });
+    return NextResponse.json(
+      { revalidated: true, paths: ["/", "/sitemap.xml", "/blog", "/research", ...paths] },
+      { headers: { "Cache-Control": "no-store" } }
+    );
   } catch {
-    return NextResponse.json({ message: "Error revalidating" }, { status: 500 });
+    return NextResponse.json(
+      { message: "Error revalidating" },
+      { status: 500 }
+    );
   }
 }

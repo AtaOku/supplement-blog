@@ -4,8 +4,10 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   async redirects() {
     return [
-      { source: "/urun-inceleme", destination: "/reviews", permanent: true },
-      { source: "/urun-inceleme/:slug", destination: "/reviews/:slug", permanent: true },
+      { source: "/reviews", destination: "/research", permanent: true },
+      { source: "/reviews/:slug", destination: "/research/:slug", permanent: true },
+      { source: "/urun-inceleme", destination: "/research", permanent: true },
+      { source: "/urun-inceleme/:slug", destination: "/research/:slug", permanent: true },
       { source: "/kategori/:slug", destination: "/category/:slug", permanent: true },
       { source: "/hakkimizda", destination: "/about", permanent: true },
     ];

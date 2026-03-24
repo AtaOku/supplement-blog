@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { getAllPosts, getAllReviews, getAllCategories } from "@/lib/sanity-queries";
+import { getAllArticles, getAllCategories } from "@/lib/notion-queries";
 import { BASE_URL } from "@/lib/config";
 
 export const revalidate = 3600;
@@ -8,30 +8,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPages: MetadataRoute.Sitemap = [
     { url: BASE_URL, lastModified: new Date(), changeFrequency: "daily", priority: 1 },
     { url: `${BASE_URL}/blog`, lastModified: new Date(), changeFrequency: "daily", priority: 0.8 },
-    { url: `${BASE_URL}/reviews`, lastModified: new Date(), changeFrequency: "daily", priority: 0.8 },
+    { url: `${BASE_URL}/research`, lastModified: new Date(), changeFrequency: "daily", priority: 0.8 },
     { url: `${BASE_URL}/about`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.3 },
     { url: `${BASE_URL}/tools/supplement-stack-builder`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
   ];
 
   try {
-    const [posts, reviews, categories] = await Promise.all([
-      getAllPosts(),
-      getAllReviews(),
+    const [articles, categories] = await Promise.all([
+      getAllArticles(),
       getAllCategories(),
     ]);
 
-    const postPages = posts.map((post) => ({
-      url: `${BASE_URL}/blog/${post.slug}`,
-      lastModified: post.date ? new Date(post.date) : new Date(),
+    const articlePages = articles.map((a) => ({
+      url: `${BASE_URL}/${a.type === "Scientific Review" ? "research" : "blog"}/${a.slug}`,
+      lastModified: a.date ? new Date(a.date) : new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.7,
-    }));
-
-    const reviewPages = reviews.map((review) => ({
-      url: `${BASE_URL}/reviews/${review.slug}`,
-      lastModified: review.date ? new Date(review.date) : new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
     }));
 
     const categoryPages = categories.map((cat) => ({
@@ -41,9 +33,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.6,
     }));
 
-    return [...staticPages, ...categoryPages, ...postPages, ...reviewPages];
+    return [...staticPages, ...categoryPages, ...articlePages];
   } catch {
-    // If Sanity is unavailable during build, return static pages only
     return staticPages;
   }
 }

@@ -15,14 +15,14 @@ import type { Icon } from "@phosphor-icons/react";
 import { FadeIn } from "@/components/MotionWrapper";
 
 const categoryIcons: Record<string, Icon> = {
-  mitokondri: Atom,
+  mitochondria: Atom,
   longevity: Timer,
   protein: Lightning,
-  kreatin: Fire,
-  vitamin: Heartbeat,
+  creatine: Fire,
+  vitamins: Heartbeat,
   "pre-workout": Pill,
-  "amino-asit": Dna,
-  saglik: ShieldCheck,
+  "amino-acids": Dna,
+  health: ShieldCheck,
 };
 
 interface Category {

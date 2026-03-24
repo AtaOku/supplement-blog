@@ -5,12 +5,12 @@ import { personJsonLd, organizationJsonLd } from "@/lib/structured-data";
 export const metadata: Metadata = {
   title: "About SupplementStack — Science-Based Supplement Reviews, Editorial Mission & Team",
   description:
-    "SupplementStack is an independent, science-based supplement resource. Learn about our editorial process, evidence-grading methodology, team credentials, and affiliate disclosure.",
+    "SupplementStack is an independent, science-based supplement resource. Learn about our editorial process, evidence-grading methodology, team credentials, and editorial independence.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About SupplementStack — Science-Based Supplement Reviews, Editorial Mission & Team",
     description:
-      "SupplementStack is an independent, science-based supplement resource. Learn about our editorial process, evidence-grading methodology, team credentials, and affiliate disclosure.",
+      "SupplementStack is an independent, science-based supplement resource. Learn about our editorial process, evidence-grading methodology, team credentials, and editorial independence.",
     type: "website",
     url: "/about",
   },
@@ -176,22 +176,17 @@ export default function AboutPage() {
           </p>
         </div>
 
-        {/* Affiliate Disclosure */}
-        <h2 id="affiliate-disclosure">Affiliate Disclosure</h2>
+        {/* Funding & Independence */}
+        <h2 id="independence">Independence</h2>
         <p>
-          SupplementStack participates in affiliate programs including Amazon Associates, iHerb, and
-          DoNotAge. When you purchase a product through an affiliate link on this site, we earn a
-          small commission at no additional cost to you.
+          SupplementStack is independently funded. We do not accept sponsored content,
+          paid reviews, or affiliate commissions. Our evaluations are based solely on
+          published clinical trial data, systematic reviews, and peer-reviewed research.
         </p>
         <p>
-          <strong>Affiliate relationships do not influence our editorial recommendations.</strong>{" "}
-          We recommend products based on evidence quality, formulation standards, and third-party
-          testing — not on commission rates. Products we have no affiliate relationship with are
-          frequently recommended when they outperform affiliated alternatives.
-        </p>
-        <p>
-          Affiliate revenue funds the operational costs of this site: hosting, research database
-          access, and the time required to produce long-form, evidence-based content.
+          <strong>No commercial relationship influences our editorial conclusions.</strong>{" "}
+          This site exists to provide honest, evidence-based supplement information
+          to people who want to make informed decisions about their health.
         </p>
 
         {/* Contact */}
