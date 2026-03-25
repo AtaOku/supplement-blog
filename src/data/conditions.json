@@ -1,0 +1,541 @@
+[
+  {
+    "slug": "adhd-focus",
+    "name": "ADHD & Focus",
+    "icon": "🎯",
+    "tag": "Cognitive",
+    "tagColor": "blue",
+    "description": "Supplements with clinical evidence for attention, working memory, and executive function in ADHD and healthy adults.",
+    "intro": "ADHD affects approximately 5-7% of children and 2-5% of adults. While medication (stimulants, non-stimulants) remains the gold standard, several supplements have demonstrated clinically meaningful effects on attention and cognition — either as standalone interventions or alongside medication. We review the evidence by strength.",
+    "supplements": [
+      {
+        "name": "Caffeine + L-Theanine",
+        "supplementSlugs": ["caffeine", "l-theanine"],
+        "evidence": "strong",
+        "studyCount": 50,
+        "dose": "100–200mg caffeine + 200mg L-Theanine",
+        "summary": "The most evidence-backed acute focus stack. Theanine attenuates caffeine-induced jitter and anxiety while preserving alertness. Meta-analyses confirm improved attention switching, accuracy, and reduced reaction time. Preferred over caffeine alone for sustained focus tasks.",
+        "pmid": null,
+        "doi": null,
+        "concern": "Tolerance to caffeine develops quickly. Avoid within 8–10h of sleep. Dependency possible with daily use — consider cycling."
+      },
+      {
+        "name": "Omega-3 (EPA/DHA)",
+        "supplementSlugs": ["omega-3"],
+        "evidence": "moderate",
+        "studyCount": 16,
+        "dose": "1.5–2g EPA/day",
+        "summary": "Meta-analysis of 16 RCTs in children with ADHD: EPA supplementation significantly reduced inattention and hyperactivity symptoms. EPA-dominant formulas outperform DHA-dominant. Effect size modest but clinically meaningful, especially in EPA-deficient individuals.",
+        "pmid": "32112672",
+        "doi": null,
+        "concern": "Effect is most pronounced when baseline EPA levels are low. Not a replacement for medication in moderate-severe ADHD. Takes 8–12 weeks to see full benefit."
+      },
+      {
+        "name": "Creatine Monohydrate",
+        "supplementSlugs": ["creatine"],
+        "evidence": "moderate",
+        "studyCount": 16,
+        "dose": "5g daily",
+        "summary": "Meta-analysis of 16 RCTs: creatine improved working memory (SMD=0.31), attention (SMD=-0.31), and processing speed (SMD=-0.51). Benefits most pronounced under stress, sleep deprivation, or in vegetarians with lower baseline brain creatine.",
+        "pmid": "39070254",
+        "doi": "10.3389/fnut.2024.1424972",
+        "concern": "Effects on attention are secondary to its primary use for muscle/performance. More research needed specifically in ADHD populations."
+      },
+      {
+        "name": "Magnesium",
+        "supplementSlugs": ["magnesium"],
+        "evidence": "moderate",
+        "studyCount": 8,
+        "dose": "200–400mg elemental/day (glycinate or threonate)",
+        "summary": "ADHD is associated with lower magnesium levels. Several trials show supplementation reduces hyperactivity and improves attention, particularly in children who are magnesium-deficient. Threonate may have superior brain penetration.",
+        "pmid": null,
+        "doi": null,
+        "concern": "Evidence stronger in children than adults. Effect is largely dependent on baseline deficiency status. Most adults with ADHD are worth testing and supplementing if deficient."
+      },
+      {
+        "name": "Zinc",
+        "supplementSlugs": [],
+        "evidence": "limited",
+        "studyCount": 5,
+        "dose": "15–30mg elemental zinc/day",
+        "summary": "Low zinc levels correlate with ADHD severity. Small RCTs show modest reduction in hyperactivity and impulsivity symptoms. Zinc deficiency is common and may reduce dopamine transporter function.",
+        "pmid": null,
+        "doi": null,
+        "concern": "Evidence base is small. High-dose zinc supplementation (>40mg/day) can deplete copper. Only supplement if deficiency is confirmed."
+      }
+    ]
+  },
+  {
+    "slug": "chronic-fatigue",
+    "name": "Chronic Fatigue",
+    "icon": "⚡",
+    "tag": "Energy",
+    "tagColor": "amber",
+    "description": "Evidence-reviewed supplements for persistent fatigue, low energy, and ME/CFS — including mitochondrial support and micronutrient deficiencies.",
+    "intro": "Chronic fatigue is one of the most common — and most under-researched — health complaints. It ranges from general low energy to ME/CFS (Myalgic Encephalomyelitis/Chronic Fatigue Syndrome), a serious debilitating condition. The supplements below address different mechanistic pathways: mitochondrial dysfunction, micronutrient deficiency, and cellular energy production.",
+    "supplements": [
+      {
+        "name": "CoQ10 (Ubiquinol)",
+        "supplementSlugs": ["coq10"],
+        "evidence": "moderate",
+        "studyCount": 13,
+        "dose": "200–300mg ubiquinol/day",
+        "summary": "Meta-analysis of 13 RCTs (n=1,126): significant reduction in fatigue scores (Hedges' g=-0.398, p=0.001). Dose-response effect: higher dose → greater fatigue reduction. Ubiquinol form preferred for adults over 40 due to declining conversion capacity.",
+        "pmid": "36091835",
+        "doi": "10.3389/fphar.2022.883251",
+        "concern": "Effects are strongest in those with confirmed CoQ10 deficiency or statin use. Standard dose of 200mg may be insufficient — some ME/CFS protocols use 400mg+."
+      },
+      {
+        "name": "Magnesium",
+        "supplementSlugs": ["magnesium"],
+        "evidence": "moderate",
+        "studyCount": 8,
+        "dose": "300–400mg elemental/day (malate or glycinate)",
+        "summary": "Magnesium is a cofactor for 300+ enzymes including ATP synthesis. Deficiency causes fatigue, muscle weakness, and brain fog. Magnesium malate specifically studied for fibromyalgia-related fatigue. Significant portion of chronic fatigue patients have suboptimal magnesium levels.",
+        "pmid": null,
+        "doi": null,
+        "concern": "RBC magnesium (not serum) is the appropriate test for intracellular deficiency. GI tolerance limits oxide form — malate or glycinate preferred."
+      },
+      {
+        "name": "Vitamin D3",
+        "supplementSlugs": ["vitamin-d3"],
+        "evidence": "moderate",
+        "studyCount": 15,
+        "dose": "2000–5000 IU/day (titrate to 50–80 ng/mL)",
+        "summary": "Vitamin D deficiency is significantly more common in chronic fatigue patients. Correction of deficiency consistently improves fatigue scores in RCTs. Benefits are largely limited to those with deficiency — supplementing when replete shows minimal additional benefit.",
+        "pmid": "31405892",
+        "doi": "10.1136/bmj.l4673",
+        "concern": "Test before supplementing — 25(OH)D blood test is essential. Target 50–70 ng/mL. High-dose D3 without K2 may increase calcium dysregulation risk."
+      },
+      {
+        "name": "NMN / NAD+ Precursors",
+        "supplementSlugs": ["nmn"],
+        "evidence": "limited",
+        "studyCount": 5,
+        "dose": "250–500mg NMN or NR/day",
+        "summary": "NAD+ decline is a hallmark of cellular aging and may contribute to fatigue through reduced mitochondrial efficiency. Early trials show improved subjective energy and muscle function. No large-scale RCTs specifically in ME/CFS.",
+        "pmid": "36482258",
+        "doi": "10.1007/s11357-022-00705-1",
+        "concern": "Evidence is early and largely in aging populations, not specifically ME/CFS. Expensive relative to current evidence level. Not a first-line intervention."
+      },
+      {
+        "name": "Creatine Monohydrate",
+        "supplementSlugs": ["creatine"],
+        "evidence": "limited",
+        "studyCount": 4,
+        "dose": "3–5g daily",
+        "summary": "Post-COVID fatigue and ME/CFS studies suggest creatine may support energy metabolism and reduce perceived exertion. Limited direct ME/CFS data, but mechanistic rationale is strong (phosphocreatine supports ATP regeneration).",
+        "pmid": null,
+        "doi": null,
+        "concern": "Limited direct evidence in ME/CFS populations. Exercise intolerance ('post-exertional malaise') in ME/CFS requires careful approach — any exercise-based comparison may not apply."
+      }
+    ]
+  },
+  {
+    "slug": "anxiety-stress",
+    "name": "Anxiety & Stress",
+    "icon": "🧘",
+    "tag": "Mental Health",
+    "tagColor": "purple",
+    "description": "Clinical evidence for supplements targeting cortisol, anxiety, HPA axis dysregulation, and perceived stress.",
+    "intro": "Anxiety disorders are the most prevalent mental health condition globally. Several supplements have demonstrated clinically meaningful effects on cortisol levels, anxiety scores, and stress biomarkers — though none replace evidence-based therapy (CBT) or medication for moderate-severe anxiety. The following are the best-supported options for subclinical anxiety and stress management.",
+    "supplements": [
+      {
+        "name": "Ashwagandha (KSM-66)",
+        "supplementSlugs": ["ashwagandha"],
+        "evidence": "strong",
+        "studyCount": 23,
+        "dose": "300–600mg KSM-66 extract/day",
+        "summary": "Meta-analysis of 23 RCTs (n=1,706): significantly reduced cortisol (SMD=-1.18), improved serum serotonin (MD=+31.75 ng/ml), and reduced self-reported stress scores. KSM-66 extract consistently outperforms lower-quality ashwagandha preparations. Evening dosing may enhance sleep benefits.",
+        "pmid": "41740946",
+        "doi": "10.1055/a-2802-8363",
+        "concern": "Cycle 8 weeks on, 2–4 weeks off. Rare liver injury reports (WHO alert). Avoid in thyroid disorders or autoimmune conditions. Testosterone effects are male-specific."
+      },
+      {
+        "name": "Magnesium (Glycinate or Threonate)",
+        "supplementSlugs": ["magnesium"],
+        "evidence": "moderate",
+        "studyCount": 18,
+        "dose": "200–400mg elemental/day",
+        "summary": "Meta-analysis: magnesium supplementation significantly reduced anxiety in adults (SMD=-0.53). Most effective in those with suboptimal intake. Glycinate form preferred for anxiety due to calming glycine component. Evening dosing optimizes HPA axis regulation.",
+        "pmid": null,
+        "doi": null,
+        "concern": "Effects strongest when baseline is deficient. Most adults consume less than recommended. Low-risk intervention with multiple benefits across conditions."
+      },
+      {
+        "name": "L-Theanine",
+        "supplementSlugs": ["l-theanine"],
+        "evidence": "moderate",
+        "studyCount": 8,
+        "dose": "200–400mg/day",
+        "summary": "Multiple RCTs show L-theanine reduces acute stress response and anxiety during cognitive tasks. Promotes alpha brain waves (relaxed alertness without sedation). Onset within 30–60 minutes — useful for situational anxiety.",
+        "pmid": null,
+        "doi": null,
+        "concern": "No tolerance develops — can be used daily. Effects are acute and short-term (3–5 hours). Better evidence for situational anxiety than generalized anxiety disorder."
+      },
+      {
+        "name": "Omega-3 (EPA-dominant)",
+        "supplementSlugs": ["omega-3"],
+        "evidence": "moderate",
+        "studyCount": 19,
+        "dose": "2–3g EPA/day (EPA ≥60% of formula)",
+        "summary": "Meta-analysis of 19 RCTs: omega-3 supplementation significantly reduced anxiety symptoms (SMD=-0.41). EPA-dominant formulas outperform DHA-dominant. Anti-inflammatory mechanisms reduce neuroinflammation linked to anxiety.",
+        "pmid": "34505026",
+        "doi": "10.1016/j.eclinm.2021.100997",
+        "concern": "Takes 8–12 weeks for full effect. EPA ≥60% of formulation is critical. DHA-dominant fish oil shows significantly weaker results."
+      }
+    ]
+  },
+  {
+    "slug": "sleep",
+    "name": "Sleep & Recovery",
+    "icon": "🌙",
+    "tag": "Sleep",
+    "tagColor": "blue",
+    "description": "Supplements with clinical evidence for sleep onset, sleep quality, and sleep duration — without creating dependency.",
+    "intro": "Approximately 30% of adults experience chronic poor sleep, with downstream effects on cognition, metabolism, immunity, and longevity. Unlike sedatives, the supplements below work through physiological mechanisms — supporting sleep architecture rather than forcing sedation. None create dependency when used appropriately.",
+    "supplements": [
+      {
+        "name": "Magnesium (Glycinate or Threonate)",
+        "supplementSlugs": ["magnesium"],
+        "evidence": "strong",
+        "studyCount": 9,
+        "dose": "200–400mg elemental/day, 30–60 min before bed",
+        "summary": "Meta-analyses confirm magnesium glycinate and threonate improve subjective sleep quality, sleep onset latency, and morning alertness. Acts via GABA receptor modulation and melatonin synthesis support. Low-risk, broadly deficient population — ideal first-line intervention.",
+        "pmid": "33865376",
+        "doi": null,
+        "concern": "Most effective in those with magnesium deficiency (majority of adults). Glycinate for sleep; threonate for sleep + cognitive benefits. Oxide form poorly absorbed — avoid."
+      },
+      {
+        "name": "Ashwagandha (KSM-66)",
+        "supplementSlugs": ["ashwagandha"],
+        "evidence": "moderate",
+        "studyCount": 5,
+        "dose": "600mg KSM-66, evening",
+        "summary": "RCT data shows KSM-66 at 600mg/day improved sleep quality scores, sleep onset, and total sleep time vs placebo. Effect partly mediated through cortisol reduction — lower evening cortisol allows normal sleep architecture.",
+        "pmid": "41740946",
+        "doi": "10.1055/a-2802-8363",
+        "concern": "Cycle recommended (8 weeks on, 2–4 weeks off). Morning dosing primarily reduces cortisol; evening dosing more specifically targets sleep quality."
+      },
+      {
+        "name": "L-Theanine",
+        "supplementSlugs": ["l-theanine"],
+        "evidence": "moderate",
+        "studyCount": 5,
+        "dose": "200–400mg, 30–60 min before bed",
+        "summary": "Promotes alpha brain wave activity associated with relaxed wakefulness transition to sleep. Several trials show improved sleep quality without sedation or next-day grogginess. Pairs well with magnesium for combined effect.",
+        "pmid": null,
+        "doi": null,
+        "concern": "Does not cause drowsiness — improves sleep quality rather than forcing sedation. Most evidence in subjective quality measures, limited polysomnography data."
+      },
+      {
+        "name": "Omega-3 (DHA-dominant)",
+        "supplementSlugs": ["omega-3"],
+        "evidence": "limited",
+        "studyCount": 5,
+        "dose": "1g DHA/day",
+        "summary": "Oxford study (n=362 children): DHA supplementation significantly increased sleep duration (+58 min) and reduced night waking. Adult data more limited. DHA is a structural component of brain cell membranes involved in melatonin synthesis.",
+        "pmid": null,
+        "doi": null,
+        "concern": "Stronger evidence in children than adults. Effect takes 16+ weeks to manifest. DHA-dominant formula recommended for sleep specifically (vs EPA-dominant for mood)."
+      }
+    ]
+  },
+  {
+    "slug": "depression-mood",
+    "name": "Depression & Mood",
+    "icon": "🌱",
+    "tag": "Mental Health",
+    "tagColor": "emerald",
+    "description": "Evidence-based supplements for mood regulation, depressive symptoms, and emotional resilience — as standalone support or adjuncts to treatment.",
+    "intro": "Depression affects over 300 million people worldwide. While antidepressants and psychotherapy remain first-line treatment, several supplements have demonstrated meaningful effects on mood — particularly in subgroups with nutritional deficiencies. These are not replacements for clinical treatment of major depressive disorder.",
+    "supplements": [
+      {
+        "name": "Omega-3 (EPA-dominant)",
+        "supplementSlugs": ["omega-3"],
+        "evidence": "strong",
+        "studyCount": 26,
+        "dose": "1–2g EPA/day (EPA ≥60%)",
+        "summary": "Meta-analysis shows EPA-dominant formulas significantly reduce depressive symptoms (SMD=-0.61). Particularly effective as adjunct to antidepressants. Mechanism: reduces neuroinflammation, supports serotonin and dopamine signaling pathways.",
+        "pmid": "32114706",
+        "doi": "10.1002/14651858.CD003177.pub5",
+        "concern": "DHA-dominant formulas show no significant antidepressant effect — EPA ≥60% is critical. Most effective as adjunct to medication, not monotherapy for MDD."
+      },
+      {
+        "name": "Creatine Monohydrate",
+        "supplementSlugs": ["creatine"],
+        "evidence": "moderate",
+        "studyCount": 5,
+        "dose": "5g daily",
+        "summary": "Emerging evidence for creatine as antidepressant adjunct, particularly in treatment-resistant depression. Creatine enhances prefrontal cortex energy availability. Several open-label and pilot RCTs show meaningful reduction in depression scores.",
+        "pmid": "39070254",
+        "doi": "10.3389/fnut.2024.1424972",
+        "concern": "Evidence is promising but limited compared to psychiatric medications. Women and those with low dietary creatine intake (vegetarians/vegans) may benefit most."
+      },
+      {
+        "name": "Vitamin D3",
+        "supplementSlugs": ["vitamin-d3"],
+        "evidence": "moderate",
+        "studyCount": 12,
+        "dose": "2000–5000 IU/day (titrate to optimal range)",
+        "summary": "Vitamin D deficiency is significantly more prevalent in depressed individuals. Correction of deficiency improves mood scores. Effect is largely limited to those who are deficient — supplementing when replete shows minimal antidepressant benefit.",
+        "pmid": "31405892",
+        "doi": "10.1136/bmj.l4673",
+        "concern": "Always test before supplementing. Effects specifically tied to correcting deficiency, not dose escalation. Does not replace antidepressants in MDD."
+      },
+      {
+        "name": "Ashwagandha (KSM-66)",
+        "supplementSlugs": ["ashwagandha"],
+        "evidence": "moderate",
+        "studyCount": 6,
+        "dose": "300–600mg/day",
+        "summary": "Meta-analysis: significantly increased serotonin (MD=+31.75 ng/mL) and reduced cortisol (SMD=-1.18). Cortisol excess is a major driver of depressive symptoms in stress-related depression. Most effective for anxious depression subtype.",
+        "pmid": "41740946",
+        "doi": "10.1055/a-2802-8363",
+        "concern": "Best evidence for stress-related and anxiety-comorbid depression, not melancholic or psychotic subtypes. Cycle use. Consult physician if on antidepressants."
+      }
+    ]
+  },
+  {
+    "slug": "athletic-performance",
+    "name": "Athletic Performance",
+    "icon": "🏋️",
+    "tag": "Performance",
+    "tagColor": "orange",
+    "description": "Supplements with robust RCT evidence for strength, power, endurance, and recovery — ranked by evidence strength.",
+    "intro": "Athletic performance supplementation is one of the most well-studied areas in nutrition science. Unlike many health supplements, the performance-enhancing effects of these compounds have been replicated across hundreds of well-designed trials. We rank them by evidence quality, not marketing budget.",
+    "supplements": [
+      {
+        "name": "Creatine Monohydrate",
+        "supplementSlugs": ["creatine"],
+        "evidence": "strong",
+        "studyCount": 500,
+        "dose": "3–5g daily (no loading needed)",
+        "summary": "The most researched sports supplement in history. Meta-analysis across 150+ studies: 8–14% increase in 1RM strength, 5–15% increase in peak power, 1–2kg lean mass over 12 weeks. Monohydrate is the only form with robust evidence — all 'advanced forms' are marketing.",
+        "pmid": "39070254",
+        "doi": "10.3389/fnut.2024.1424972",
+        "concern": "No meaningful concerns at 3–5g/day. Kidney disease is the only contraindication. Loading phase optional — same saturation reached in 28 days without loading."
+      },
+      {
+        "name": "Caffeine",
+        "supplementSlugs": ["caffeine"],
+        "evidence": "strong",
+        "studyCount": 50,
+        "dose": "3–6mg/kg bodyweight, 45–60 min pre-exercise",
+        "summary": "Cochrane-level evidence: 2–4% improvement in endurance time-trial, 3–5% increase in 1RM, significant improvement in sprint performance and team-sport metrics. Mechanism: adenosine receptor antagonism reduces perceived effort. Well-established ergogenic aid.",
+        "pmid": null,
+        "doi": null,
+        "concern": "Tolerance develops — some athletes cycle or limit use to competition/key sessions. Avoid within 8–10h of sleep. Genetic variation (CYP1A2) affects metabolism speed and risk profile."
+      },
+      {
+        "name": "Omega-3 (EPA/DHA)",
+        "supplementSlugs": ["omega-3"],
+        "evidence": "moderate",
+        "studyCount": 25,
+        "dose": "2–3g EPA+DHA/day",
+        "summary": "Multiple RCTs demonstrate reduced delayed onset muscle soreness (DOMS), faster recovery, and preserved muscle mass during caloric restriction. DHA incorporated into cell membranes reduces exercise-induced inflammation. Some evidence for modest VO2max improvement.",
+        "pmid": "34505026",
+        "doi": "10.1016/j.eclinm.2021.100997",
+        "concern": "Performance benefits are primarily recovery-based, not acute. Most meaningful for high-frequency training athletes. Takes 4–8 weeks to see full effect."
+      },
+      {
+        "name": "Magnesium",
+        "supplementSlugs": ["magnesium"],
+        "evidence": "moderate",
+        "studyCount": 12,
+        "dose": "300–400mg/day (malate or citrate)",
+        "summary": "Sweat losses during exercise increase magnesium requirements. Deficiency impairs muscle contraction, protein synthesis, and glucose metabolism. Supplementation in deficient athletes improves strength and endurance. Malate form particularly studied for exercise performance.",
+        "pmid": null,
+        "doi": null,
+        "concern": "Benefits most pronounced in those with baseline deficiency. Athletes and people in hot climates are particularly at risk of insufficient intake."
+      },
+      {
+        "name": "Ashwagandha (KSM-66)",
+        "supplementSlugs": ["ashwagandha"],
+        "evidence": "moderate",
+        "studyCount": 8,
+        "dose": "600mg KSM-66/day",
+        "summary": "Meta-analysis: KSM-66 improved VO2max, muscle strength, and recovery in trained and untrained subjects. Testosterone increase of +57 ng/dL may contribute to training adaptations in men. Recovery from high-intensity exercise improved vs placebo.",
+        "pmid": "41740946",
+        "doi": "10.1055/a-2802-8363",
+        "concern": "Testosterone effects are male-specific and not observed in women. Cycle use recommended. Effects on trained athletes are modest compared to creatine."
+      }
+    ]
+  },
+  {
+    "slug": "cardiovascular-health",
+    "name": "Cardiovascular Health",
+    "icon": "❤️",
+    "tag": "Heart Health",
+    "tagColor": "red",
+    "description": "Supplements with clinical evidence for heart disease prevention, blood pressure, triglycerides, and cardiovascular mortality.",
+    "intro": "Cardiovascular disease remains the leading cause of death globally. Several supplements have demonstrated meaningful effects on cardiovascular risk factors and clinical outcomes in large meta-analyses. We present the evidence honestly — including limitations that pharmaceutical-level trials have revealed.",
+    "supplements": [
+      {
+        "name": "Omega-3 (EPA/DHA)",
+        "supplementSlugs": ["omega-3"],
+        "evidence": "strong",
+        "studyCount": 86,
+        "dose": "2–4g EPA/day",
+        "summary": "Cochrane review of 86 RCTs (162,796 participants): reduced coronary heart disease events (RR=0.91), CHD mortality (RR=0.90). JACC 2022 meta-analysis (883,627 participants): omega-3 reduced CVD mortality (RR=0.93). Prescription EPA (Vascepa) showed 25% CVD event reduction at 4g/day in REDUCE-IT trial.",
+        "pmid": "34505026",
+        "doi": "10.1016/j.eclinm.2021.100997",
+        "concern": "High EPA doses (4g+) increase atrial fibrillation risk (RR=1.35) and bleeding (RR=1.49). Combination EPA+DHA shows less cardiovascular benefit than EPA alone at equivalent doses."
+      },
+      {
+        "name": "CoQ10 (Ubiquinol)",
+        "supplementSlugs": ["coq10"],
+        "evidence": "moderate",
+        "studyCount": 26,
+        "dose": "200–300mg ubiquinol/day",
+        "summary": "JACC 2022 meta-analysis (884 RCTs, 883,627 participants): CoQ10 reduced all-cause mortality (RR=0.68). Q-SYMBIO trial: 300mg CoQ10 reduced major cardiac events by 43% in heart failure patients. Blood pressure reduction of -11 mmHg systolic in hypertension meta-analysis.",
+        "pmid": "36480969",
+        "doi": "10.1016/j.jacc.2022.09.048",
+        "concern": "Evidence strongest in heart failure patients. General prevention benefit is less certain. May reduce warfarin efficacy — consult physician if on anticoagulants."
+      },
+      {
+        "name": "Magnesium",
+        "supplementSlugs": ["magnesium"],
+        "evidence": "moderate",
+        "studyCount": 34,
+        "dose": "300–400mg elemental/day",
+        "summary": "Meta-analysis of 34 RCTs: magnesium supplementation reduced systolic BP by 2 mmHg and diastolic by 1.78 mmHg. JACC 2022 found moderate-quality evidence for cardiovascular risk factor reduction. Mechanism: vasodilation via calcium channel modulation.",
+        "pmid": "36480969",
+        "doi": "10.1016/j.jacc.2022.09.048",
+        "concern": "Blood pressure effect is modest and may only be meaningful in hypertensive individuals. Avoid high doses in kidney disease."
+      },
+      {
+        "name": "Vitamin D3",
+        "supplementSlugs": ["vitamin-d3"],
+        "evidence": "limited",
+        "studyCount": 52,
+        "dose": "1000–4000 IU/day",
+        "summary": "Despite strong observational data linking low vitamin D to cardiovascular disease, BMJ 2019 meta-analysis (52 RCTs, 75,454 participants) found no significant reduction in cardiovascular mortality (RR=0.98). The 16% cancer mortality reduction is the stronger evidence.",
+        "pmid": "31405892",
+        "doi": "10.1136/bmj.l4673",
+        "concern": "Vitamin D supplementation is still recommended for deficiency correction — but expectations for cardiovascular benefit should be tempered by RCT evidence, which is weaker than observational data suggests."
+      }
+    ]
+  },
+  {
+    "slug": "longevity",
+    "name": "Longevity & Healthspan",
+    "icon": "🔬",
+    "tag": "Longevity",
+    "tagColor": "purple",
+    "description": "Supplements with evidence for lifespan extension, biological age reduction, or healthspan markers in human clinical trials.",
+    "intro": "Longevity supplementation is the most exciting — and most overhyped — space in nutrition science. Most dramatic results come from animal models that have repeatedly failed to translate to humans. We apply a strict standard: what does human clinical trial data show? The answer is more modest than the marketing, but genuinely interesting.",
+    "supplements": [
+      {
+        "name": "Creatine Monohydrate",
+        "supplementSlugs": ["creatine"],
+        "evidence": "strong",
+        "studyCount": 500,
+        "dose": "3–5g daily",
+        "summary": "Overlooked longevity supplement. Prevents sarcopenia (muscle loss with age), improves cognitive function in older adults (SMD=0.88 for memory), and reduces fall risk. Unlike most longevity supplements, the human evidence base is enormous and consistent.",
+        "pmid": "35984306",
+        "doi": "10.1093/nutrit/nuac064",
+        "concern": "Not glamorous, but possibly the highest evidence-to-cost ratio in longevity supplementation. Monohydrate only — all other forms lack equivalent evidence."
+      },
+      {
+        "name": "NMN (NAD+ Precursor)",
+        "supplementSlugs": ["nmn"],
+        "evidence": "moderate",
+        "studyCount": 12,
+        "dose": "300–600mg daily",
+        "summary": "RCT (n=80): NMN at 600mg/day significantly increased blood NAD+, improved walking distance, and prevented biological age increase over 60 days. NAD+ declines 50% by age 60 — restoration may support multiple longevity pathways.",
+        "pmid": "36482258",
+        "doi": "10.1007/s11357-022-00705-1",
+        "concern": "Evidence is promising but short-term (60–90 days). No human longevity data exists. High cost relative to current evidence level. FDA removed NMN from supplement category in 2022 (legal gray area in some countries)."
+      },
+      {
+        "name": "CoQ10 (Ubiquinol)",
+        "supplementSlugs": ["coq10"],
+        "evidence": "moderate",
+        "studyCount": 26,
+        "dose": "100–200mg ubiquinol/day",
+        "summary": "JACC 2022 meta-analysis (883,627 participants): CoQ10 reduced all-cause mortality (RR=0.68). CoQ10 levels decline significantly with age and statin use. Mitochondrial function support is a core longevity mechanism.",
+        "pmid": "36480969",
+        "doi": "10.1016/j.jacc.2022.09.048",
+        "concern": "Ubiquinol (reduced form) absorbs significantly better than ubiquinone (oxidized form), especially in adults over 40. Mortality data is from a broad meta-analysis — effect magnitude in healthy individuals is uncertain."
+      },
+      {
+        "name": "Omega-3 (EPA/DHA)",
+        "supplementSlugs": ["omega-3"],
+        "evidence": "strong",
+        "studyCount": 86,
+        "dose": "2g EPA/day",
+        "summary": "Cochrane 2021 (162,796 participants): reduced CHD mortality. VITAL trial: 16% cancer mortality reduction at 2g/day in 5-year follow-up. Telomere length preservation shown in several trials — a direct marker of biological aging.",
+        "pmid": "32114706",
+        "doi": "10.1002/14651858.CD003177.pub5",
+        "concern": "Longevity benefits are secondary findings in cardiovascular trials. Dedicated longevity RCTs don't exist. Still one of the best-supported supplements overall."
+      },
+      {
+        "name": "Vitamin D3",
+        "supplementSlugs": ["vitamin-d3"],
+        "evidence": "moderate",
+        "studyCount": 52,
+        "dose": "2000–5000 IU/day",
+        "summary": "VITAL trial (25,871 participants): 16% reduction in cancer mortality after 2+ years. Immune system regulation, reduction in autoimmune disease risk (22%). Deficiency affects ~1 billion people — correction alone is meaningful for healthspan.",
+        "pmid": "31405892",
+        "doi": "10.1136/bmj.l4673",
+        "concern": "No effect on all-cause mortality in meta-analysis. Cancer benefit is real but primarily for those who are deficient. Test 25(OH)D before supplementing."
+      }
+    ]
+  },
+  {
+    "slug": "immune-support",
+    "name": "Immune Support",
+    "icon": "🛡️",
+    "tag": "Immunity",
+    "tagColor": "emerald",
+    "description": "Evidence-based supplements for immune function, infection prevention, and inflammation modulation.",
+    "intro": "Immune support is one of the most over-marketed supplement categories. The immune system is not a single dial you can 'boost' — but several nutrients genuinely reduce infection risk, support appropriate immune responses, and resolve inflammation more efficiently when you are deficient in them.",
+    "supplements": [
+      {
+        "name": "Vitamin D3",
+        "supplementSlugs": ["vitamin-d3"],
+        "evidence": "strong",
+        "studyCount": 25,
+        "dose": "2000–4000 IU/day",
+        "summary": "BMJ 2017 meta-analysis (25 RCTs, 11,321 participants): 12% reduction in acute respiratory infections overall; 70% reduction in those severely deficient (25(OH)D < 25 nmol/L). Vitamin D regulates innate and adaptive immune responses — a truly immune-active nutrient.",
+        "pmid": "31405892",
+        "doi": "10.1136/bmj.l4673",
+        "concern": "Benefit is strongest in those who are deficient. Supplementing when replete offers less advantage. Test before supplementing. K2 co-supplementation recommended at higher doses."
+      },
+      {
+        "name": "Omega-3 (EPA/DHA)",
+        "supplementSlugs": ["omega-3"],
+        "evidence": "moderate",
+        "studyCount": 30,
+        "dose": "1–2g EPA+DHA/day",
+        "summary": "EPA and DHA are precursors to specialized pro-resolving mediators (SPMs) that actively resolve inflammation. Evidence for reduced CRP and IL-6. Several studies show reduced upper respiratory infection duration.",
+        "pmid": "34505026",
+        "doi": "10.1016/j.eclinm.2021.100997",
+        "concern": "Effect on immune function is primarily anti-inflammatory and resolution-focused — not 'boosting' immune response. Most meaningful as chronic anti-inflammatory support."
+      },
+      {
+        "name": "Ashwagandha (KSM-66)",
+        "supplementSlugs": ["ashwagandha"],
+        "evidence": "moderate",
+        "studyCount": 10,
+        "dose": "300–600mg/day",
+        "summary": "Multiple RCTs show increased NK cell activity, improved lymphocyte function, and reduced CRP with KSM-66 supplementation. Cortisol reduction indirectly benefits immune function — chronic cortisol elevation is immunosuppressive.",
+        "pmid": "41740946",
+        "doi": "10.1055/a-2802-8363",
+        "concern": "May be inappropriate in autoimmune conditions — consult physician. Immune effects are secondary to stress/cortisol reduction rather than direct immunostimulatory action."
+      },
+      {
+        "name": "Zinc",
+        "supplementSlugs": [],
+        "evidence": "moderate",
+        "studyCount": 20,
+        "dose": "15–25mg elemental zinc/day",
+        "summary": "Essential for over 300 immune-related enzymes. Deficiency significantly impairs both innate and adaptive immunity. Meta-analysis: zinc supplementation reduced duration of the common cold by ~1 day when taken within 24h of symptom onset.",
+        "pmid": null,
+        "doi": null,
+        "concern": "Supplementing above 40mg/day long-term depletes copper. Routine high-dose zinc supplementation is not recommended — only if deficiency is confirmed or during acute illness."
+      }
+    ]
+  }
+]

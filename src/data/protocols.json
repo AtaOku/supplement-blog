@@ -220,5 +220,91 @@
         "concern": "None significant. Attia considers this one of the highest-confidence supplements available."
       }
     ]
+  },
+  {
+    "slug": "david-sinclair-longevity",
+    "name": "David Sinclair",
+    "protocol": "Longevity Protocol",
+    "tag": "Longevity Science",
+    "tagColor": "emerald",
+    "monthlyEstimate": "$150–350",
+    "image": "⚗️",
+    "description": "Harvard geneticist and 'Lifespan' author's personal stack. Heavy focus on NAD+ biology, senolytics, and autophagy. We run the human evidence.",
+    "verdict": "Cutting-edge but ahead of human data",
+    "intro": "David Sinclair PhD is a Harvard Medical School professor whose research focuses on epigenetic reprogramming and NAD+ biology. His personal protocol is one of the most discussed in longevity circles — and one of the most controversial. We applied the same evidence standards we use for everything else: what do human RCTs actually show?",
+    "supplements": [
+      {
+        "name": "NMN (Nicotinamide Mononucleotide)",
+        "dose": "1g daily",
+        "category": "NAD+ Precursor",
+        "evidence": "moderate",
+        "evidenceLabel": "Moderate",
+        "studyCount": 12,
+        "summary": "RCT (n=80, 600mg/day): significantly increased blood NAD+ at 30 and 60 days. Improved walking distance vs placebo. Biological age unchanged in treated vs increased in placebo group. Sinclair takes 1g, above the best-studied 600mg dose.",
+        "pmid": "36482258",
+        "doi": "10.1007/s11357-022-00705-1",
+        "concern": "Human data is encouraging but limited to short-term studies (60–90 days). No longevity data in humans. Sinclair's 1g dose exceeds what's been rigorously studied."
+      },
+      {
+        "name": "Resveratrol",
+        "dose": "1g daily (with fat)",
+        "category": "SIRT1 Activator",
+        "evidence": "limited",
+        "evidenceLabel": "Limited",
+        "studyCount": 6,
+        "summary": "RCT (n=56, 6 months, 100mg resveratrol): No significant effect on arterial stiffness, endothelial function, body fat, blood pressure, lipids, glucose, or inflammation markers in healthy non-obese adults. Powerful in animal models; human translation has been disappointing.",
+        "pmid": "24659610",
+        "doi": "10.18632/aging.100597",
+        "concern": "The most hyped supplement in longevity circles with the weakest human clinical data. Animal models show dramatic effects — these have not replicated in humans. Sinclair's dosing (1g) is 10x higher than the studied dose, but no robust RCT at this dose exists."
+      },
+      {
+        "name": "Metformin",
+        "dose": "500mg–1g daily",
+        "category": "AMPK Activator (Rx)",
+        "evidence": "moderate",
+        "evidenceLabel": "Moderate",
+        "studyCount": 20,
+        "summary": "Prescription diabetes drug being studied for longevity (TAME trial ongoing). Activates AMPK, reduces mTOR signaling. Observational data: metformin users have lower all-cause mortality vs non-users. TAME trial results expected 2025–2026.",
+        "pmid": null,
+        "doi": null,
+        "concern": "⚠️ Prescription-only. Not a supplement. May blunt exercise adaptations (studies suggest it reduces mitochondrial benefits of training). Not appropriate without physician oversight. We include it only because Sinclair publicly discusses his use."
+      },
+      {
+        "name": "Vitamin D3 + K2",
+        "dose": "5000 IU D3 + 180mcg K2 (MK-7)",
+        "category": "Vitamins",
+        "evidence": "strong",
+        "evidenceLabel": "Strong",
+        "studyCount": 52,
+        "summary": "Meta-analysis of 52 RCTs (75,454 participants): D3 reduced cancer mortality by 16% (RR=0.84). K2 prevents soft tissue calcification associated with high-dose D3. Sinclair's dose is at the high end — titration to blood level (60–80 ng/mL) is the more precise approach.",
+        "pmid": "31405892",
+        "doi": "10.1136/bmj.l4673",
+        "concern": "D3 targets of 60–80 ng/mL (Sinclair and Attia) are above standard guidelines of 40–60. Benefits above 50 ng/mL are debated. K2 co-supplementation is well-reasoned to prevent hypercalcemia risk."
+      },
+      {
+        "name": "Spermidine",
+        "dose": "1–2mg daily",
+        "category": "Autophagy Inducer",
+        "evidence": "limited",
+        "evidenceLabel": "Limited",
+        "studyCount": 4,
+        "summary": "12-month JAMA trial (n=100, 0.9mg/day): No significant improvement in primary memory outcome (p=0.47). Exploratory analysis showed possible benefit on verbal memory and inflammation. Shorter 3-month pilot (n=85) with higher dose showed +2.23 MMSE points in mild dementia (p=0.026).",
+        "pmid": "35616942",
+        "doi": "10.1001/jamanetworkopen.2022.13875",
+        "concern": "Human evidence is preliminary. The rigorous 12-month JAMA trial missed its primary endpoint. Positive signals in exploratory analyses and pilot studies warrant further research but not strong confidence yet."
+      },
+      {
+        "name": "Quercetin + Fisetin (Senolytics)",
+        "dose": "Periodic: 1000mg quercetin + 20mg/kg fisetin",
+        "category": "Senolytics",
+        "evidence": "limited",
+        "evidenceLabel": "Limited",
+        "studyCount": 5,
+        "summary": "Senolytics selectively eliminate senescent ('zombie') cells that accumulate with age and drive inflammation. Mayo Clinic early trials show cellular senescence markers reduced. Fisetin is the most potent natural senolytic identified in lab studies. Human RCT data is very early.",
+        "pmid": "32112672",
+        "doi": "10.1111/febs.15264",
+        "concern": "Human data is in Phase 1–2 trials only. Optimal dosing, timing, and cycling protocols are not established. This is genuine frontier science — Sinclair is essentially running self-experiments. Do not self-administer without medical supervision."
+      }
+    ]
   }
 ]
