@@ -9,6 +9,13 @@ const typeColors: Record<string, string> = {
   News: "text-blue-600 bg-blue-50",
 };
 
+const typeIcon: Record<string, string> = {
+  "Scientific Review": "🔬",
+  "Deep Dive": "🧪",
+  Guide: "📋",
+  News: "📰",
+};
+
 function articleHref(article: ArticleMeta): string {
   if (article.type === "Scientific Review") return `/research/${article.slug}`;
   return `/blog/${article.slug}`;
@@ -22,6 +29,7 @@ export default function ArticleCard({
   featured?: boolean;
 }) {
   const colorClass = typeColors[article.type] ?? "text-emerald-600 bg-emerald-50";
+  const icon = typeIcon[article.type] ?? "📋";
 
   return (
     <HoverLift className="group h-full">
@@ -29,15 +37,17 @@ export default function ArticleCard({
         href={articleHref(article)}
         className={`flex flex-col h-full rounded-2xl border border-zinc-200/80 bg-white hover:border-zinc-300 transition-colors ${featured ? "p-8" : "p-6"}`}
       >
-        <div className="flex items-center gap-2.5 mb-3">
-          <span className={`text-xs font-medium px-2.5 py-1 rounded-full ${colorClass}`}>
+        <div className="flex items-center gap-2 mb-3">
+          <span className={`inline-flex items-center gap-1 text-xs font-medium px-2.5 py-1 rounded-full ${colorClass}`}>
+            <span>{icon}</span>
             {article.type || article.category}
           </span>
+          <span className="text-xs text-zinc-300">·</span>
           <span className="text-xs text-zinc-400">{article.readingTime}</span>
         </div>
 
         <h3
-          className={`font-semibold text-zinc-900 mb-2 group-hover:text-emerald-600 transition-colors leading-snug ${featured ? "text-2xl md:text-3xl tracking-tight" : "text-base"}`}
+          className={`font-serif font-semibold text-zinc-900 mb-2 group-hover:text-emerald-600 transition-colors leading-snug ${featured ? "text-2xl md:text-3xl tracking-tight" : "text-base"}`}
         >
           {article.title}
         </h3>
@@ -48,19 +58,21 @@ export default function ArticleCard({
           {article.description}
         </p>
 
-        <div className="flex items-center justify-between mt-auto">
-          <time className="text-xs text-zinc-400">
+        <div className="flex items-center justify-between mt-auto pt-3 border-t border-zinc-50">
+          <div className="flex items-center gap-2">
+            <div className="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-semibold text-[9px] shrink-0">
+              RH
+            </div>
+            <span className="text-xs text-zinc-400">{article.author || "Ryan Holt"}</span>
+          </div>
+          <time className="text-xs text-zinc-300">
             {article.date
               ? new Date(article.date).toLocaleDateString("en-US", {
-                  year: "numeric",
                   month: "short",
-                  day: "numeric",
+                  year: "numeric",
                 })
               : ""}
           </time>
-          {article.category && (
-            <span className="text-xs text-zinc-400">{article.category}</span>
-          )}
         </div>
       </Link>
     </HoverLift>

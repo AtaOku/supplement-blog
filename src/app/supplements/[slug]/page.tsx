@@ -25,6 +25,7 @@ const levelConfig: Record<string, { color: string; bg: string; label: string }> 
   strong: { color: "text-emerald-700", bg: "bg-emerald-50 border-emerald-200", label: "Strong Evidence" },
   moderate: { color: "text-amber-700", bg: "bg-amber-50 border-amber-200", label: "Moderate Evidence" },
   emerging: { color: "text-orange-700", bg: "bg-orange-50 border-orange-200", label: "Emerging Evidence" },
+  limited: { color: "text-red-700", bg: "bg-red-50 border-red-200", label: "Limited Evidence" },
   insufficient: { color: "text-zinc-600", bg: "bg-zinc-50 border-zinc-200", label: "Insufficient Evidence" },
 };
 
@@ -32,6 +33,7 @@ const dotColor: Record<string, string> = {
   strong: "bg-emerald-500",
   moderate: "bg-amber-500",
   emerging: "bg-orange-400",
+  limited: "bg-red-400",
   insufficient: "bg-zinc-400",
 };
 
@@ -99,12 +101,12 @@ export default async function SupplementPage({ params }: Props) {
           <h2 className="font-serif text-2xl font-semibold text-zinc-900 mb-6">Evidence by Outcome</h2>
           <div className="space-y-3">
             {s.effects.map((e) => {
-              const cfg = levelConfig[e.level];
+              const cfg = levelConfig[e.level] ?? levelConfig.insufficient;
               return (
                 <div key={e.area} className={`border rounded-xl p-5 ${cfg.bg}`}>
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-2.5">
-                      <div className={`w-3 h-3 rounded-full ${dotColor[e.level]}`} />
+                      <div className={`w-3 h-3 rounded-full ${dotColor[e.level] ?? dotColor.insufficient}`} />
                       <h3 className="font-semibold text-zinc-900">{e.area}</h3>
                     </div>
                     <span className={`text-xs font-medium ${cfg.color}`}>{cfg.label}</span>

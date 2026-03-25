@@ -34,12 +34,15 @@
     "slug": "vitamin-d3",
     "category": "Vitamins",
     "description": "A prohormone essential for calcium metabolism, immune function, and gene expression. Deficiency affects ~1 billion people worldwide.",
+    "citations": [
+      { "pmid": "31405892", "doi": "10.1136/bmj.l4673", "note": "Meta-analysis of 52 RCTs (75,454 participants) — D3 supplementation, cancer mortality, all-cause mortality. BMJ 2019." }
+    ],
     "effects": [
       { "area": "Bone Health", "level": "strong", "studies": 50, "participants": 34000, "effectSize": "6% fracture risk reduction (JAMA 2019)" },
+      { "area": "Cancer Mortality", "level": "moderate", "studies": 52, "participants": 75454, "effectSize": "16% reduction in cancer death (RR=0.84, 95% CI 0.74–0.95). D3 only; D2 shows no effect. BMJ 2019 meta-analysis." },
       { "area": "Immune Function", "level": "moderate", "studies": 25, "participants": 11000, "effectSize": "12% reduction in respiratory infections (BMJ 2017)" },
-      { "area": "Cancer Mortality", "level": "moderate", "studies": 5, "participants": 25000, "effectSize": "25% reduction after 2+ years (VITAL)" },
-      { "area": "Autoimmune Disease", "level": "moderate", "studies": 3, "participants": 25000, "effectSize": "22% reduction (VITAL)" },
-      { "area": "Depression", "level": "emerging", "studies": 10, "participants": 3000, "effectSize": "Small effect, primarily in deficient individuals" }
+      { "area": "All-cause Mortality", "level": "limited", "studies": 52, "participants": 75454, "effectSize": "No significant reduction in all-cause mortality (RR=0.98, 95% CI 0.95–1.02). Vitamin D3 alone insufficient." },
+      { "area": "Autoimmune Disease", "level": "moderate", "studies": 3, "participants": 25000, "effectSize": "22% reduction (VITAL trial — 2000 IU/day over 5 years)" }
     ],
     "dosing": {
       "standard": "1000-2000 IU/day",
@@ -183,12 +186,16 @@
     "slug": "coq10",
     "category": "Mitochondria",
     "description": "Essential cofactor in mitochondrial electron transport chain. Levels decline with age and statin use. Ubiquinol is the reduced (active) form.",
+    "citations": [
+      { "pmid": "36480969", "doi": "10.1016/j.jacc.2022.09.048", "note": "Meta-analysis of 884 RCTs (883,627 participants) — CoQ10 and all-cause mortality. JACC 2022." },
+      { "pmid": "36091835", "doi": "10.3389/fphar.2022.883251", "note": "Meta-analysis of 13 RCTs (1,126 participants) — CoQ10 and fatigue reduction. Front Pharmacol 2022." }
+    ],
     "effects": [
-      { "area": "Heart Failure", "level": "strong", "studies": 14, "participants": 2000, "effectSize": "43% reduction in major cardiac events (Q-SYMBIO)" },
-      { "area": "Statin Side Effects", "level": "strong", "studies": 12, "participants": 1500, "effectSize": "Reduced statin-associated myopathy" },
-      { "area": "Blood Pressure", "level": "moderate", "studies": 8, "participants": 400, "effectSize": "-11 mmHg systolic (Cochrane)" },
-      { "area": "Exercise Performance", "level": "emerging", "studies": 5, "participants": 200, "effectSize": "Modest improvement in VO2max" },
-      { "area": "Fertility", "level": "emerging", "studies": 4, "participants": 200, "effectSize": "Improved sperm parameters and oocyte quality" }
+      { "area": "All-cause Mortality", "level": "moderate", "studies": 884, "participants": 883627, "effectSize": "32% reduction in all-cause mortality (RR=0.68, 95% CI 0.49–0.94). JACC 2022 meta-analysis of 884 RCTs." },
+      { "area": "Fatigue Reduction", "level": "moderate", "studies": 13, "participants": 1126, "effectSize": "Hedges' g = -0.398 (95% CI -0.641 to -0.155, p=0.001). Dose-response: higher dose → greater effect. Front Pharmacol 2022." },
+      { "area": "Heart Failure", "level": "strong", "studies": 14, "participants": 2000, "effectSize": "43% reduction in major cardiac events (Q-SYMBIO trial, 300mg/day)" },
+      { "area": "Statin Side Effects", "level": "strong", "studies": 12, "participants": 1500, "effectSize": "Reduced statin-associated myopathy symptoms" },
+      { "area": "Blood Pressure", "level": "moderate", "studies": 8, "participants": 400, "effectSize": "-11 mmHg systolic (Cochrane review)" }
     ],
     "dosing": {
       "standard": "100-200mg/day",
