@@ -1,0 +1,224 @@
+[
+  {
+    "slug": "bryan-johnson-blueprint",
+    "name": "Bryan Johnson",
+    "protocol": "Blueprint Protocol",
+    "tag": "Longevity",
+    "tagColor": "purple",
+    "monthlyEstimate": "$1,500+",
+    "image": "🧬",
+    "description": "The tech entrepreneur spending $2M/year to reverse aging. We analyze every supplement in his stack against peer-reviewed research.",
+    "verdict": "High evidence core, experimental edges",
+    "intro": "Bryan Johnson's Blueprint Protocol is one of the most aggressive anti-aging supplement regimens ever documented. We analyzed each supplement against current clinical evidence.",
+    "supplements": [
+      {
+        "name": "NMN (Nicotinamide Mononucleotide)",
+        "dose": "1g daily",
+        "category": "NAD+ Precursor",
+        "evidence": "moderate",
+        "evidenceLabel": "Moderate",
+        "studyCount": 12,
+        "summary": "RCT (n=80) showed NMN 600mg/day significantly increased blood NAD+ at 30 and 60 days. Walking distance improved vs placebo. Biological age stayed unchanged in treated groups vs increased in placebo.",
+        "pmid": "36482258",
+        "doi": "10.1007/s11357-022-00705-1",
+        "concern": "Most human trials are short-term (60-90 days). Long-term safety data in humans is limited. Bryan's dose (1g) exceeds the studied optimal of 600mg."
+      },
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "2.5g daily",
+        "category": "Performance & Cognition",
+        "evidence": "strong",
+        "evidenceLabel": "Strong",
+        "studyCount": 500,
+        "summary": "Meta-analysis of 16 RCTs: creatine significantly improved memory (SMD=0.31), attention time (SMD=-0.31), and processing speed (SMD=-0.51). Separate meta-analysis found memory benefits especially in older adults (SMD=0.88).",
+        "pmid": "39070254",
+        "doi": "10.3389/fnut.2024.1424972",
+        "concern": "None significant. One of the most studied supplements. Bryan's dose (2.5g) is within the evidence-based range of 3-5g, though slightly below standard."
+      },
+      {
+        "name": "Omega-3 (EPA/DHA)",
+        "dose": "2g EPA daily",
+        "category": "Cardiovascular",
+        "evidence": "strong",
+        "evidenceLabel": "Strong",
+        "studyCount": 86,
+        "summary": "Cochrane review of 86 RCTs (162,796 participants): omega-3 reduced coronary heart disease events (RR=0.91) and mortality (RR=0.90). Separate meta-analysis of 38 RCTs (149,051 participants): EPA monotherapy reduced cardiovascular mortality by 18% vs 6% for EPA+DHA.",
+        "pmid": "34505026",
+        "doi": "10.1016/j.eclinm.2021.100997",
+        "concern": "EPA monotherapy increased atrial fibrillation risk (RR=1.35) and bleeding (RR=1.49). Bryan's high EPA focus aligns with stronger evidence but carries these trade-offs."
+      },
+      {
+        "name": "Ashwagandha (KSM-66)",
+        "dose": "600mg daily",
+        "category": "Adaptogen",
+        "evidence": "moderate",
+        "evidenceLabel": "Moderate",
+        "studyCount": 23,
+        "summary": "Meta-analysis of 23 RCTs (n=1,706): significantly reduced cortisol (SMD=-1.18, p<0.04), increased testosterone in men (MD=57.43 ng/dl), and increased serotonin (MD=31.75 ng/ml). Dose-response effects based on withanolide content.",
+        "pmid": "41740946",
+        "doi": "10.1055/a-2802-8363",
+        "concern": "Cycling recommended (8 weeks on, 2-4 weeks off). No testosterone effect in women. Some studies used proprietary extracts making comparison difficult."
+      },
+      {
+        "name": "CoQ10 (Ubiquinol)",
+        "dose": "100mg daily",
+        "category": "Mitochondrial",
+        "evidence": "moderate",
+        "evidenceLabel": "Moderate",
+        "studyCount": 30,
+        "summary": "Clinical evidence supports CoQ10 for mitochondrial function, with ubiquinol form showing superior bioavailability over ubiquinone, especially in adults over 40. Benefits for cardiovascular health and exercise performance documented.",
+        "pmid": "38794708",
+        "doi": null,
+        "concern": "Dose-response not fully established. Absorption varies widely between formulations. Ubiquinol preferred over ubiquinone for older adults."
+      },
+      {
+        "name": "Magnesium (Threonate)",
+        "dose": "400mg daily",
+        "category": "Mineral",
+        "evidence": "strong",
+        "evidenceLabel": "Strong",
+        "studyCount": 40,
+        "summary": "Meta-analyses show magnesium supplementation improves sleep quality markers. Threonate form specifically studied for brain penetration and cognitive function. Most adults are deficient.",
+        "pmid": "33865376",
+        "doi": null,
+        "concern": "Threonate is more expensive but evidence for cognitive benefits over other forms is limited. Glycinate and citrate may offer similar benefits at lower cost."
+      }
+    ]
+  },
+  {
+    "slug": "andrew-huberman-stack",
+    "name": "Andrew Huberman",
+    "protocol": "Daily Supplement Stack",
+    "tag": "Cognitive Performance",
+    "tagColor": "blue",
+    "monthlyEstimate": "$200–400",
+    "image": "🧠",
+    "description": "Stanford neuroscientist's supplement protocol for focus, sleep, and hormonal health. Evidence breakdown for each recommendation.",
+    "verdict": "Strong evidence, practical doses",
+    "intro": "Andrew Huberman is a Stanford neuroscience professor whose podcast has made him one of the most influential voices in supplement science. His stack focuses on sleep, focus, and hormonal optimization.",
+    "supplements": [
+      {
+        "name": "Omega-3 (EPA/DHA)",
+        "dose": "2-3g EPA daily",
+        "category": "Mood & Cardiovascular",
+        "evidence": "strong",
+        "evidenceLabel": "Strong",
+        "studyCount": 86,
+        "summary": "Cochrane review of 86 RCTs: reduces coronary events. Huberman emphasizes EPA for mood — meta-analyses show EPA≥60% formulas outperform DHA-dominant for depression. His dose aligns with evidence.",
+        "pmid": "32114706",
+        "doi": "10.1002/14651858.CD003177.pub5",
+        "concern": "High EPA doses increase bleeding and AF risk. Should be monitored in those on blood thinners."
+      },
+      {
+        "name": "Magnesium (Threonate + Bisglycinate)",
+        "dose": "300-400mg daily",
+        "category": "Sleep & Recovery",
+        "evidence": "strong",
+        "evidenceLabel": "Strong",
+        "studyCount": 40,
+        "summary": "Meta-analyses confirm magnesium improves subjective sleep quality. Huberman recommends threonate for brain penetration and bisglycinate for sleep. Most adults are deficient — supplementation is low-risk, high-reward.",
+        "pmid": "33865376",
+        "doi": null,
+        "concern": "Threonate premium may not be justified for everyone. Standard forms (citrate, glycinate) also effective."
+      },
+      {
+        "name": "Ashwagandha (KSM-66)",
+        "dose": "600mg daily",
+        "category": "Stress & Testosterone",
+        "evidence": "moderate",
+        "evidenceLabel": "Moderate",
+        "studyCount": 23,
+        "summary": "23-RCT meta-analysis: cortisol reduction (SMD=-1.18), testosterone increase in men (+57 ng/dl). Huberman recommends cycling and taking in the evening. Evidence supports his approach.",
+        "pmid": "41740946",
+        "doi": "10.1055/a-2802-8363",
+        "concern": "Huberman correctly recommends cycling. Long-term continuous use not well studied. May interact with thyroid medications."
+      },
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "5g daily",
+        "category": "Performance & Cognition",
+        "evidence": "strong",
+        "evidenceLabel": "Strong",
+        "studyCount": 500,
+        "summary": "One of the most researched supplements. Meta-analysis shows cognitive benefits (memory SMD=0.31, attention, processing speed). Huberman's 5g dose is the gold standard supported by decades of research.",
+        "pmid": "39070254",
+        "doi": "10.3389/fnut.2024.1424972",
+        "concern": "None meaningful at 5g/day. May cause minor water retention. Monohydrate is the only form with robust evidence."
+      },
+      {
+        "name": "Caffeine + L-Theanine",
+        "dose": "100-300mg caffeine + 200mg theanine",
+        "category": "Focus",
+        "evidence": "strong",
+        "evidenceLabel": "Strong",
+        "studyCount": 50,
+        "summary": "Well-established synergistic combination. Theanine smooths caffeine jitteriness while preserving alertness. Huberman recommends delaying caffeine 90-120min after waking to align with cortisol rhythm.",
+        "pmid": null,
+        "doi": null,
+        "concern": "Caffeine tolerance develops quickly. Huberman's delayed timing advice lacks strong RCT support but is physiologically plausible."
+      }
+    ]
+  },
+  {
+    "slug": "peter-attia-longevity",
+    "name": "Peter Attia",
+    "protocol": "Longevity Toolkit",
+    "tag": "Healthspan",
+    "tagColor": "emerald",
+    "monthlyEstimate": "$150–250",
+    "image": "🏥",
+    "description": "The physician behind 'Outlive' takes a conservative, evidence-first approach. We analyze his minimal but targeted supplement selection.",
+    "verdict": "Conservative, high-confidence picks",
+    "intro": "Peter Attia MD is known for his rigorous, evidence-based approach to longevity. Unlike many influencers, he maintains a deliberately small supplement stack, focusing only on interventions with strong evidence or addressing documented deficiencies.",
+    "supplements": [
+      {
+        "name": "EPA/DHA (High-dose Omega-3)",
+        "dose": "4g+ EPA/DHA daily",
+        "category": "Cardiovascular & Brain",
+        "evidence": "strong",
+        "evidenceLabel": "Strong",
+        "studyCount": 86,
+        "summary": "Attia takes higher doses than most, targeting blood EPA levels rather than a fixed dose. Meta-analysis of 149,051 participants shows cardiovascular mortality reduction. His focus on measuring blood levels is more precise than dose-based approaches.",
+        "pmid": "34505026",
+        "doi": "10.1016/j.eclinm.2021.100997",
+        "concern": "At 4g+ daily, bleeding risk and AF risk increase. Attia monitors via regular blood work, which most people don't do."
+      },
+      {
+        "name": "Magnesium (L-Threonate)",
+        "dose": "2g daily (144mg elemental)",
+        "category": "Sleep & Cognitive",
+        "evidence": "strong",
+        "evidenceLabel": "Strong",
+        "studyCount": 40,
+        "summary": "Attia has discussed magnesium as one of the few supplements nearly everyone should consider due to widespread deficiency. Threonate form chosen for brain bioavailability.",
+        "pmid": "33865376",
+        "doi": null,
+        "concern": "Cost premium of threonate vs other forms. Attia acknowledges this is partly based on mechanistic data, not RCTs comparing forms head-to-head."
+      },
+      {
+        "name": "Vitamin D3",
+        "dose": "Titrated to blood level (60-80 ng/mL)",
+        "category": "Immune & Bone",
+        "evidence": "strong",
+        "evidenceLabel": "Strong",
+        "studyCount": 100,
+        "summary": "Attia doses based on blood levels, not a fixed amount. This is the most evidence-based approach — individual absorption varies 3-5x. Targets 60-80 ng/mL, higher than the typical 30-50 range.",
+        "pmid": null,
+        "doi": null,
+        "concern": "His 60-80 target is above many guidelines (40-60). Evidence for benefits above 50 ng/mL is debated. Requires regular blood monitoring."
+      },
+      {
+        "name": "Creatine Monohydrate",
+        "dose": "5g daily",
+        "category": "Muscle & Brain",
+        "evidence": "strong",
+        "evidenceLabel": "Strong",
+        "studyCount": 500,
+        "summary": "Standard 5g dose. Attia values creatine for both physical performance and emerging cognitive evidence. Meta-analysis confirms cognitive benefits, especially in older adults (SMD=0.88).",
+        "pmid": "35984306",
+        "doi": "10.1093/nutrit/nuac064",
+        "concern": "None significant. Attia considers this one of the highest-confidence supplements available."
+      }
+    ]
+  }
+]
