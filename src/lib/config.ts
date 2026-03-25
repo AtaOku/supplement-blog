@@ -7,13 +7,14 @@ export const SITE_NAME = "Supplement Guide";
 export const navigation = [
   { name: "Articles", href: "/blog" },
   { name: "Research", href: "/research" },
-  { name: "Stack Builder", href: "/tools/supplement-stack-builder" },
+  { name: "Our Process", href: "/methodology" },
   { name: "About", href: "/about" },
 ];
 
 export const footerPages = [
   { name: "Articles", href: "/blog" },
   { name: "Research", href: "/research" },
+  { name: "Our Research Process", href: "/methodology" },
   { name: "Stack Builder", href: "/tools/supplement-stack-builder" },
   { name: "About", href: "/about" },
 ];
