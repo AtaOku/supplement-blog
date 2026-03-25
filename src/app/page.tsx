@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getAllArticles, getAllCategories } from "@/lib/notion-queries";
+import { SCIENTIFIC_REVIEW_TYPE } from "@/lib/config";
 import { FadeIn } from "@/components/MotionWrapper";
 import ArticleCard from "@/components/ArticleCard";
 import NewsletterForm from "@/components/NewsletterForm";
@@ -14,8 +15,8 @@ export default async function Home() {
     getAllCategories().catch(() => []),
   ]);
 
-  const guides = allArticles.filter((a) => a.type !== "Scientific Review").slice(0, 4);
-  const research = allArticles.filter((a) => a.type === "Scientific Review").slice(0, 3);
+  const guides = allArticles.filter((a) => a.type !== SCIENTIFIC_REVIEW_TYPE).slice(0, 4);
+  const research = allArticles.filter((a) => a.type === SCIENTIFIC_REVIEW_TYPE).slice(0, 3);
 
   return (
     <>

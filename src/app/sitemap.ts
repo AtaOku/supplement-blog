@@ -7,24 +7,27 @@ import supplements from "@/data/supplements.json";
 
 export const revalidate = 3600;
 
+// Static JSON data was last updated 2026-03-25 — update this when data files change
+const DATA_LAST_MODIFIED = new Date("2026-03-25");
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const protocolPages = protocols.map((p) => ({
     url: `${BASE_URL}/protocols/${p.slug}`,
-    lastModified: new Date(),
+    lastModified: DATA_LAST_MODIFIED,
     changeFrequency: "monthly" as const,
     priority: 0.85,
   }));
 
   const conditionPages = conditions.map((c) => ({
     url: `${BASE_URL}/conditions/${c.slug}`,
-    lastModified: new Date(),
+    lastModified: DATA_LAST_MODIFIED,
     changeFrequency: "monthly" as const,
     priority: 0.85,
   }));
 
   const supplementPages = supplements.map((s) => ({
     url: `${BASE_URL}/supplements/${s.slug}`,
-    lastModified: new Date(),
+    lastModified: DATA_LAST_MODIFIED,
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));

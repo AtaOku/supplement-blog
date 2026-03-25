@@ -75,7 +75,7 @@ export function articleJsonLd(post: {
     publisher: org,
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${BASE_URL}/${post.slug}`,
+      "@id": `${BASE_URL}/blog/${post.slug}`,
     },
   };
 }

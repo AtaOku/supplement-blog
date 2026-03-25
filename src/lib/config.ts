@@ -2,7 +2,9 @@ export const BASE_URL = (
   process.env.NEXT_PUBLIC_BASE_URL || "https://supplementstack.space"
 ).trim();
 
-export const SITE_NAME = "Supplement Guide";
+export const SITE_NAME = "Supplement Stack";
+
+export const SCIENTIFIC_REVIEW_TYPE = "Scientific Review";
 
 export const navigation = [
   { name: "Articles", href: "/blog" },

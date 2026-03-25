@@ -14,7 +14,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-baseline gap-1.5">
             <span className="text-lg font-bold tracking-tight text-emerald-600">Supplement</span>
-            <span className="text-lg font-light tracking-tight text-zinc-900">Guide</span>
+            <span className="text-lg font-light tracking-tight text-zinc-900">Stack</span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">

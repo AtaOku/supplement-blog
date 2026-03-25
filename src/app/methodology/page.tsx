@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Our Research Process — How We Evaluate Supplements",
   description:
-    "Learn how Supplement Guide analyzes scientific evidence. Our transparent methodology covers study selection, evidence grading, and how we translate complex research into clear guidance.",
+    "Learn how Supplement Stack analyzes scientific evidence. Our transparent methodology covers study selection, evidence grading, and how we translate complex research into clear guidance.",
 };
 
 const steps = [

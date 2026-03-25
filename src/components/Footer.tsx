@@ -11,7 +11,7 @@ export default async function Footer() {
           <div className="md:col-span-2">
             <Link href="/" className="flex items-baseline gap-1.5 mb-4">
               <span className="text-lg font-bold tracking-tight text-emerald-600">Supplement</span>
-              <span className="text-lg font-light tracking-tight text-zinc-900">Guide</span>
+              <span className="text-lg font-light tracking-tight text-zinc-900">Stack</span>
             </Link>
             <p className="text-sm text-zinc-500 leading-relaxed max-w-sm">
               Independent, science-based supplement research. Every claim backed by peer-reviewed evidence.
@@ -51,7 +51,7 @@ export default async function Footer() {
             peer-reviewed journals, and systematic reviews. No affiliate relationships influence our evaluations.
           </p>
           <p className="mt-4 text-xs text-zinc-300">
-            &copy; {new Date().getFullYear()} Supplement Guide
+            &copy; {new Date().getFullYear()} Supplement Stack
           </p>
         </div>
       </div>
