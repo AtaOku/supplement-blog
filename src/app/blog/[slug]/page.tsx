@@ -96,19 +96,30 @@ export default async function BlogPostPage({ params }: Props) {
             })}
           </time>
         </div>
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+        <h1 className="font-serif text-3xl font-bold text-gray-900 sm:text-4xl leading-tight">
           {article.title}
         </h1>
-        <p className="mt-4 text-lg text-gray-600">{article.description}</p>
+        <p className="mt-4 text-lg text-gray-600 leading-relaxed">{article.description}</p>
+
+        {/* Evidence badge */}
+        <div className="mt-5 flex items-center gap-4 text-xs text-zinc-400">
+          <span className="inline-flex items-center gap-1 bg-emerald-50 text-emerald-700 px-2.5 py-1 rounded-full font-medium">
+            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            Evidence-Based
+          </span>
+          <span>{article.readingTime}</span>
+          <span>Updated {new Date(article.date).toLocaleDateString("en-US", { month: "short", year: "numeric" })}</span>
+        </div>
+
         <div className="mt-6 flex items-center gap-3 border-t border-gray-100 pt-5">
-          <div className="w-9 h-9 rounded-full bg-green-100 flex items-center justify-center text-green-700 font-semibold text-sm shrink-0">
+          <div className="w-9 h-9 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-semibold text-sm shrink-0">
             RH
           </div>
           <div>
-            <Link href="/about" className="text-sm font-medium text-gray-900 hover:text-green-600">
+            <Link href="/about" className="text-sm font-medium text-gray-900 hover:text-emerald-600">
               {article.author}
             </Link>
-            <p className="text-xs text-gray-500">Lead Science Writer</p>
+            <p className="text-xs text-gray-500">Lead Science Writer · Peer-Reviewed Sources</p>
           </div>
         </div>
       </div>

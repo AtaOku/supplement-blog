@@ -41,10 +41,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Prose — MDX Content */
-.prose h1 { font-size: 2.25rem; font-weight: 700; letter-spacing: -0.025em; line-height: 1.1; margin-bottom: 1.5rem; color: #18181b; }
-.prose h2 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; margin-top: 2.5rem; margin-bottom: 1rem; color: #18181b; }
-.prose h3 { font-size: 1.125rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; color: #27272a; }
+/* Serif headings — academic trust signal (Examine.com pattern) */
+.font-serif { font-family: var(--font-lora), Georgia, serif; }
+
+/* Prose — Article Content */
+.prose h1 { font-family: var(--font-lora), Georgia, serif; font-size: 2.25rem; font-weight: 700; letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 1.5rem; color: #18181b; }
+.prose h2 { font-family: var(--font-lora), Georgia, serif; font-size: 1.5rem; font-weight: 600; letter-spacing: -0.02em; margin-top: 3rem; margin-bottom: 1rem; color: #18181b; padding-bottom: 0.5rem; border-bottom: 1px solid #f4f4f5; }
+.prose h3 { font-family: var(--font-lora), Georgia, serif; font-size: 1.25rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; color: #27272a; }
 .prose p { margin-bottom: 1.25rem; line-height: 1.8; color: #3f3f46; max-width: 65ch; }
 .prose ul { list-style-type: disc; padding-left: 1.25rem; margin-bottom: 1.25rem; }
 .prose ol { list-style-type: decimal; padding-left: 1.25rem; margin-bottom: 1.25rem; }

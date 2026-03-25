@@ -20,20 +20,17 @@ export default async function Home() {
     <>
       {/* Hero */}
       <section className="bg-white border-b border-zinc-100">
-        <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-20 md:py-32">
+        <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-16 md:py-28">
           <FadeIn>
             <div className="max-w-2xl">
-              <p className="text-sm font-medium text-emerald-600 mb-4 tracking-wide">
-                Evidence-based research
-              </p>
-              <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-none text-zinc-900 mb-6">
+              <h1 className="font-serif text-4xl md:text-[3.5rem] font-bold tracking-tight leading-[1.1] text-zinc-900 mb-6">
                 Supplement science you can actually trust
               </h1>
               <p className="text-base md:text-lg text-zinc-500 leading-relaxed max-w-lg mb-8">
                 No affiliate hype. No star ratings. Just peer-reviewed evidence
                 on what works, what doesn&apos;t, and what we don&apos;t know yet.
               </p>
-              <div className="flex gap-3">
+              <div className="flex gap-3 mb-10">
                 <Link
                   href="/blog"
                   className="bg-zinc-900 text-white px-6 py-3 rounded-xl text-sm font-medium hover:bg-zinc-800 active:scale-[0.98] transition-all"
@@ -47,6 +44,14 @@ export default async function Home() {
                   Scientific Reviews
                 </Link>
               </div>
+              {/* Trust metrics */}
+              <div className="flex flex-wrap items-center gap-5 text-sm text-zinc-400">
+                <span><strong className="text-zinc-600 font-semibold">{allArticles.length}</strong> evidence-based articles</span>
+                <span className="hidden sm:inline text-zinc-200">·</span>
+                <span><strong className="text-zinc-600 font-semibold">{categories.length}</strong> supplement topics</span>
+                <span className="hidden sm:inline text-zinc-200">·</span>
+                <span>Peer-reviewed sources only</span>
+              </div>
             </div>
           </FadeIn>
         </div>
@@ -56,7 +61,7 @@ export default async function Home() {
       <section className="py-20">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <FadeIn>
-            <h2 className="text-xl font-semibold text-zinc-900 mb-8 tracking-tight">
+            <h2 className="font-serif text-2xl font-semibold text-zinc-900 mb-8 tracking-tight">
               Topics
             </h2>
           </FadeIn>
@@ -70,7 +75,7 @@ export default async function Home() {
           <div className="max-w-[1400px] mx-auto px-4 md:px-8">
             <div className="flex items-baseline justify-between mb-8">
               <FadeIn>
-                <h2 className="text-xl font-semibold text-zinc-900 tracking-tight">
+                <h2 className="font-serif text-2xl font-semibold text-zinc-900 tracking-tight">
                   Latest Research
                 </h2>
               </FadeIn>
@@ -93,7 +98,7 @@ export default async function Home() {
           <div className="max-w-[1400px] mx-auto px-4 md:px-8">
             <div className="flex items-baseline justify-between mb-8">
               <FadeIn>
-                <h2 className="text-xl font-semibold text-zinc-900 tracking-tight">
+                <h2 className="font-serif text-2xl font-semibold text-zinc-900 tracking-tight">
                   Latest Articles
                 </h2>
               </FadeIn>
