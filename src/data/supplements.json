@@ -1,0 +1,353 @@
+[
+  {
+    "id": "creatine",
+    "name": "Creatine Monohydrate",
+    "slug": "creatine",
+    "category": "Performance",
+    "description": "The most researched sports supplement in history. Increases phosphocreatine stores for ATP regeneration during high-intensity exercise.",
+    "effects": [
+      { "area": "Strength", "level": "strong", "studies": 150, "participants": 5000, "effectSize": "8-14% increase in 1RM" },
+      { "area": "Muscle Mass", "level": "strong", "studies": 80, "participants": 3000, "effectSize": "1-2kg lean mass over 12 weeks" },
+      { "area": "Cognition", "level": "moderate", "studies": 15, "participants": 800, "effectSize": "Improved working memory under stress/sleep deprivation" },
+      { "area": "Power Output", "level": "strong", "studies": 60, "participants": 2000, "effectSize": "5-15% increase in peak power" }
+    ],
+    "dosing": {
+      "standard": "3-5g/day",
+      "loading": "20g/day for 5-7 days (optional)",
+      "perKg": 0.07,
+      "timing": "Any time, daily consistency matters most",
+      "withFood": true,
+      "notes": "Loading phase is optional — same saturation reached in ~28 days at 3-5g/day"
+    },
+    "safety": {
+      "rating": "Excellent",
+      "sideEffects": ["Water retention (1-2kg initially)", "Possible GI discomfort at high doses"],
+      "contraindications": ["Pre-existing kidney disease (consult physician)"],
+      "upperLimit": "10g/day long-term appears safe in studies"
+    },
+    "relatedArticles": ["creatine-guide"],
+    "tags": ["performance", "muscle", "cognitive"]
+  },
+  {
+    "id": "vitamin-d3",
+    "name": "Vitamin D3",
+    "slug": "vitamin-d3",
+    "category": "Vitamins",
+    "description": "A prohormone essential for calcium metabolism, immune function, and gene expression. Deficiency affects ~1 billion people worldwide.",
+    "effects": [
+      { "area": "Bone Health", "level": "strong", "studies": 50, "participants": 34000, "effectSize": "6% fracture risk reduction (JAMA 2019)" },
+      { "area": "Immune Function", "level": "moderate", "studies": 25, "participants": 11000, "effectSize": "12% reduction in respiratory infections (BMJ 2017)" },
+      { "area": "Cancer Mortality", "level": "moderate", "studies": 5, "participants": 25000, "effectSize": "25% reduction after 2+ years (VITAL)" },
+      { "area": "Autoimmune Disease", "level": "moderate", "studies": 3, "participants": 25000, "effectSize": "22% reduction (VITAL)" },
+      { "area": "Depression", "level": "emerging", "studies": 10, "participants": 3000, "effectSize": "Small effect, primarily in deficient individuals" }
+    ],
+    "dosing": {
+      "standard": "1000-2000 IU/day",
+      "deficiency": "5000 IU/day for 8-12 weeks",
+      "perKg": null,
+      "timing": "With largest meal (fat-soluble)",
+      "withFood": true,
+      "notes": "D3 preferred over D2 (25% more effective). Test 25(OH)D levels. Obese individuals may need 2x dose."
+    },
+    "safety": {
+      "rating": "Good",
+      "sideEffects": ["Hypercalcemia at very high doses (>10,000 IU/day chronic)"],
+      "contraindications": ["Sarcoidosis", "Severe kidney disease", "Hypercalcemia"],
+      "upperLimit": "10,000 IU/day (IOM upper limit), toxicity rare below this"
+    },
+    "relatedArticles": ["vitamin-d3-k2-guide"],
+    "tags": ["vitamins", "immune", "bone", "longevity"]
+  },
+  {
+    "id": "omega-3",
+    "name": "Omega-3 (EPA/DHA)",
+    "slug": "omega-3",
+    "category": "Health",
+    "description": "Essential polyunsaturated fatty acids with roles in inflammation, cardiovascular function, and brain structure.",
+    "effects": [
+      { "area": "Cardiovascular (high-risk)", "level": "strong", "studies": 20, "participants": 50000, "effectSize": "25% CVD risk reduction at 4g EPA/day (REDUCE-IT)" },
+      { "area": "Triglycerides", "level": "strong", "studies": 40, "participants": 15000, "effectSize": "15-30% reduction at 2-4g/day" },
+      { "area": "Depression", "level": "moderate", "studies": 26, "participants": 2160, "effectSize": "SMD -0.61 for EPA-predominant (Translational Psychiatry 2019)" },
+      { "area": "Cognitive Decline Prevention", "level": "insufficient", "studies": 12, "participants": 25000, "effectSize": "No clear benefit in healthy adults (Cochrane 2022)" },
+      { "area": "Heart Attack Prevention", "level": "moderate", "studies": 5, "participants": 25000, "effectSize": "28% reduction (VITAL)" }
+    ],
+    "dosing": {
+      "standard": "1-2g combined EPA+DHA/day",
+      "therapeutic": "4g EPA/day for cardiovascular (prescription)",
+      "perKg": null,
+      "timing": "With meals containing fat",
+      "withFood": true,
+      "notes": "Triglyceride form absorbs 50% better than ethyl ester. EPA-predominant for mood, DHA for development."
+    },
+    "safety": {
+      "rating": "Good",
+      "sideEffects": ["Fishy burps", "GI discomfort", "Possible increased bleeding at >3g/day"],
+      "contraindications": ["Anticoagulant therapy (consult physician)", "Fish allergy (use algal source)"],
+      "upperLimit": "3g/day without physician supervision (FDA)"
+    },
+    "relatedArticles": ["omega-3-fatty-acids-guide"],
+    "tags": ["cardiovascular", "brain", "anti-inflammatory"]
+  },
+  {
+    "id": "magnesium",
+    "name": "Magnesium",
+    "slug": "magnesium",
+    "category": "Health",
+    "description": "Essential mineral involved in 300+ enzymatic reactions. ~50% of adults are deficient. Form matters significantly for absorption and target effect.",
+    "effects": [
+      { "area": "Sleep Quality", "level": "moderate", "studies": 8, "participants": 500, "effectSize": "Improved sleep quality scores (glycinate form)" },
+      { "area": "Blood Pressure", "level": "moderate", "studies": 34, "participants": 2000, "effectSize": "-2 mmHg systolic (meta-analysis)" },
+      { "area": "Muscle Cramps", "level": "moderate", "studies": 7, "participants": 400, "effectSize": "Reduced frequency in deficient populations" },
+      { "area": "Anxiety", "level": "emerging", "studies": 4, "participants": 300, "effectSize": "Reduced anxiety symptoms (glycinate form)" },
+      { "area": "Migraine Prevention", "level": "moderate", "studies": 5, "participants": 350, "effectSize": "Reduced frequency by ~40% at 600mg/day" }
+    ],
+    "dosing": {
+      "standard": "200-400mg elemental/day",
+      "perKg": null,
+      "timing": "Evening for sleep (glycinate), morning for energy (malate). Split doses absorb better.",
+      "withFood": true,
+      "notes": "Form matters: Glycinate for sleep/anxiety, Citrate for general, Threonate for cognition, Taurate for cardiovascular."
+    },
+    "safety": {
+      "rating": "Excellent",
+      "sideEffects": ["GI distress at high doses (especially oxide)", "Loose stools"],
+      "contraindications": ["Severe kidney disease", "Myasthenia gravis"],
+      "upperLimit": "350mg/day supplemental (IOM), GI tolerance is usually limiting factor"
+    },
+    "relatedArticles": ["magnesium-forms-guide"],
+    "tags": ["sleep", "cardiovascular", "cognitive", "muscle"]
+  },
+  {
+    "id": "ashwagandha",
+    "name": "Ashwagandha (KSM-66)",
+    "slug": "ashwagandha",
+    "category": "Adaptogens",
+    "description": "Adaptogenic herb (Withania somnifera) with clinical evidence for cortisol reduction, stress management, and anxiolytic effects.",
+    "effects": [
+      { "area": "Cortisol Reduction", "level": "strong", "studies": 8, "participants": 500, "effectSize": "11-32% serum cortisol reduction" },
+      { "area": "Anxiety", "level": "moderate", "studies": 5, "participants": 400, "effectSize": "Significant HAM-A score reduction" },
+      { "area": "Testosterone", "level": "emerging", "studies": 4, "participants": 300, "effectSize": "~15% increase (mostly in stressed/infertile men)" },
+      { "area": "Strength", "level": "emerging", "studies": 2, "participants": 100, "effectSize": "Modest increase in untrained subjects" },
+      { "area": "Sleep Quality", "level": "moderate", "studies": 3, "participants": 200, "effectSize": "Improved sleep onset and quality" }
+    ],
+    "dosing": {
+      "standard": "300-600mg/day (KSM-66)",
+      "sensoril": "125-250mg/day (Sensoril extract)",
+      "perKg": null,
+      "timing": "Morning or evening, with food",
+      "withFood": true,
+      "notes": "KSM-66 most studied. Consider cycling 8 weeks on, 2-4 weeks off due to liver toxicity reports."
+    },
+    "safety": {
+      "rating": "Moderate",
+      "sideEffects": ["GI discomfort", "Drowsiness", "Rare liver injury reports (WHO 2023 alert)"],
+      "contraindications": ["Hyperthyroidism", "Pregnancy", "Autoimmune conditions", "Liver disease"],
+      "upperLimit": "600mg/day KSM-66, cycle recommended"
+    },
+    "relatedArticles": ["ashwagandha-guide"],
+    "tags": ["stress", "cortisol", "adaptogen", "sleep"]
+  },
+  {
+    "id": "nmn",
+    "name": "NMN (Nicotinamide Mononucleotide)",
+    "slug": "nmn",
+    "category": "Longevity",
+    "description": "NAD+ precursor that restores cellular NAD+ levels, which decline with age. Central to longevity research but human data is still early.",
+    "effects": [
+      { "area": "NAD+ Levels", "level": "strong", "studies": 8, "participants": 400, "effectSize": "Significant increase in blood NAD+ metabolites" },
+      { "area": "Insulin Sensitivity", "level": "emerging", "studies": 2, "participants": 50, "effectSize": "Improved in prediabetic women (Washington University)" },
+      { "area": "Aerobic Capacity", "level": "emerging", "studies": 2, "participants": 80, "effectSize": "Modest VO2max improvement in recreational runners" },
+      { "area": "Longevity (human)", "level": "insufficient", "studies": 0, "participants": 0, "effectSize": "No human longevity data yet — animal data promising" },
+      { "area": "Muscle Function", "level": "emerging", "studies": 1, "participants": 30, "effectSize": "Improved walking speed in elderly (Japan)" }
+    ],
+    "dosing": {
+      "standard": "250-500mg/day",
+      "research": "Up to 1200mg/day in clinical trials",
+      "perKg": null,
+      "timing": "Morning, sublingual or oral",
+      "withFood": false,
+      "notes": "FDA removed NMN from dietary supplement category in 2022. Sublingual may bypass first-pass metabolism."
+    },
+    "safety": {
+      "rating": "Good (short-term data)",
+      "sideEffects": ["Generally well-tolerated in trials up to 1200mg/day"],
+      "contraindications": ["Cancer (theoretical — NAD+ supports all cells including cancer)"],
+      "upperLimit": "No established upper limit. Most studies use 250-1200mg/day."
+    },
+    "relatedArticles": ["nad-nmn-guide", "nmn-supplement-evidence-review"],
+    "tags": ["longevity", "NAD+", "aging", "mitochondria"]
+  },
+  {
+    "id": "coq10",
+    "name": "CoQ10 / Ubiquinol",
+    "slug": "coq10",
+    "category": "Mitochondria",
+    "description": "Essential cofactor in mitochondrial electron transport chain. Levels decline with age and statin use. Ubiquinol is the reduced (active) form.",
+    "effects": [
+      { "area": "Heart Failure", "level": "strong", "studies": 14, "participants": 2000, "effectSize": "43% reduction in major cardiac events (Q-SYMBIO)" },
+      { "area": "Statin Side Effects", "level": "strong", "studies": 12, "participants": 1500, "effectSize": "Reduced statin-associated myopathy" },
+      { "area": "Blood Pressure", "level": "moderate", "studies": 8, "participants": 400, "effectSize": "-11 mmHg systolic (Cochrane)" },
+      { "area": "Exercise Performance", "level": "emerging", "studies": 5, "participants": 200, "effectSize": "Modest improvement in VO2max" },
+      { "area": "Fertility", "level": "emerging", "studies": 4, "participants": 200, "effectSize": "Improved sperm parameters and oocyte quality" }
+    ],
+    "dosing": {
+      "standard": "100-200mg/day",
+      "therapeutic": "300-600mg/day for heart failure",
+      "perKg": null,
+      "timing": "With fat-containing meal",
+      "withFood": true,
+      "notes": "Ubiquinol absorbs 2-8x better than ubiquinone. Over 40, ubiquinol preferred due to declining conversion."
+    },
+    "safety": {
+      "rating": "Excellent",
+      "sideEffects": ["Mild GI discomfort", "Insomnia if taken late"],
+      "contraindications": ["May reduce warfarin efficacy", "Consult before surgery"],
+      "upperLimit": "1200mg/day used safely in clinical trials"
+    },
+    "relatedArticles": ["mitochondrial-supplements-guide", "coq10-ubiquinol-science-review"],
+    "tags": ["mitochondria", "cardiovascular", "energy", "aging"]
+  },
+  {
+    "id": "caffeine",
+    "name": "Caffeine",
+    "slug": "caffeine",
+    "category": "Performance",
+    "description": "Adenosine receptor antagonist. The most consumed psychoactive substance worldwide. Well-established ergogenic aid.",
+    "effects": [
+      { "area": "Alertness", "level": "strong", "studies": 100, "participants": 10000, "effectSize": "Significant improvement in reaction time and vigilance" },
+      { "area": "Endurance Performance", "level": "strong", "studies": 50, "participants": 3000, "effectSize": "2-4% improvement in time-trial performance" },
+      { "area": "Strength", "level": "moderate", "studies": 20, "participants": 500, "effectSize": "3-5% increase in 1RM" },
+      { "area": "Fat Oxidation", "level": "moderate", "studies": 15, "participants": 400, "effectSize": "10-30% increase in fat oxidation rate" },
+      { "area": "Cognition", "level": "strong", "studies": 40, "participants": 3000, "effectSize": "Improved attention, working memory, reaction time" }
+    ],
+    "dosing": {
+      "standard": "100-200mg",
+      "performance": "3-6mg/kg body weight, 30-60 min pre-exercise",
+      "perKg": 4,
+      "timing": "30-60 min before desired effect. Avoid within 8-10h of sleep.",
+      "withFood": false,
+      "notes": "CYP1A2 genetics affect metabolism speed (fast vs slow metabolizers). Tolerance develops; consider cycling."
+    },
+    "safety": {
+      "rating": "Good (at recommended doses)",
+      "sideEffects": ["Anxiety", "Insomnia", "Increased heart rate", "GI discomfort", "Dependence"],
+      "contraindications": ["Anxiety disorders", "Cardiac arrhythmias", "Pregnancy (limit 200mg/day)"],
+      "upperLimit": "400mg/day for healthy adults (FDA)"
+    },
+    "relatedArticles": ["caffeine-l-theanine-stack"],
+    "tags": ["performance", "cognitive", "energy", "pre-workout"]
+  },
+  {
+    "id": "l-theanine",
+    "name": "L-Theanine",
+    "slug": "l-theanine",
+    "category": "Cognitive",
+    "description": "Amino acid found in tea leaves. Promotes alpha brain wave activity for relaxed alertness without sedation. Synergistic with caffeine.",
+    "effects": [
+      { "area": "Anxiety Reduction", "level": "moderate", "studies": 8, "participants": 400, "effectSize": "Reduced stress response during cognitive tasks" },
+      { "area": "Focus (with caffeine)", "level": "strong", "studies": 10, "participants": 500, "effectSize": "Improved attention switching and accuracy" },
+      { "area": "Sleep Quality", "level": "emerging", "studies": 3, "participants": 150, "effectSize": "Improved sleep quality in ADHD children" },
+      { "area": "Alpha Brain Waves", "level": "strong", "studies": 6, "participants": 200, "effectSize": "Significant increase in alpha wave activity within 40 min" }
+    ],
+    "dosing": {
+      "standard": "100-200mg",
+      "withCaffeine": "200mg with 100mg caffeine (2:1 ratio)",
+      "perKg": null,
+      "timing": "30 min before desired effect",
+      "withFood": false,
+      "notes": "No tolerance develops. Can be taken daily without cycling. Caffeine:Theanine 1:2 ratio optimal."
+    },
+    "safety": {
+      "rating": "Excellent",
+      "sideEffects": ["Essentially none at recommended doses"],
+      "contraindications": ["None established"],
+      "upperLimit": "No established toxicity even at 400mg+"
+    },
+    "relatedArticles": ["caffeine-l-theanine-stack"],
+    "tags": ["cognitive", "anxiety", "focus", "sleep"]
+  },
+  {
+    "id": "vitamin-k2",
+    "name": "Vitamin K2 (MK-7)",
+    "slug": "vitamin-k2",
+    "category": "Vitamins",
+    "description": "Activates osteocalcin (calcium to bones) and matrix GLA protein (prevents arterial calcification). Essential D3 companion.",
+    "effects": [
+      { "area": "Bone Mineral Density", "level": "moderate", "studies": 8, "participants": 1000, "effectSize": "Improved BMD with D3+K2 vs D3 alone" },
+      { "area": "Arterial Calcification", "level": "moderate", "studies": 3, "participants": 5000, "effectSize": "52% lower risk in Rotterdam Study (observational)" },
+      { "area": "Fracture Risk", "level": "emerging", "studies": 4, "participants": 500, "effectSize": "Trend toward reduction, not yet definitive" }
+    ],
+    "dosing": {
+      "standard": "100-200mcg/day (MK-7)",
+      "perKg": null,
+      "timing": "With fat-containing meal, alongside D3",
+      "withFood": true,
+      "notes": "MK-7 preferred over MK-4 (72h vs 1h half-life). Always pair with Vitamin D3."
+    },
+    "safety": {
+      "rating": "Excellent",
+      "sideEffects": ["None at recommended doses"],
+      "contraindications": ["Warfarin therapy (interferes with anticoagulation)"],
+      "upperLimit": "No established upper limit for K2"
+    },
+    "relatedArticles": ["vitamin-d3-k2-guide"],
+    "tags": ["vitamins", "bone", "cardiovascular"]
+  },
+  {
+    "id": "taurine",
+    "name": "Taurine",
+    "slug": "taurine",
+    "category": "Longevity",
+    "description": "Conditionally essential amino acid with emerging longevity evidence. The 2023 Science paper showed taurine decline correlates with aging across species.",
+    "effects": [
+      { "area": "Longevity (animal)", "level": "moderate", "studies": 1, "participants": 0, "effectSize": "10-12% lifespan increase in mice (Science 2023)" },
+      { "area": "Exercise Performance", "level": "moderate", "studies": 10, "participants": 500, "effectSize": "Improved time to exhaustion at 1-6g/day" },
+      { "area": "Cardiovascular", "level": "emerging", "studies": 5, "participants": 200, "effectSize": "Blood pressure reduction, improved endothelial function" },
+      { "area": "Longevity (human)", "level": "insufficient", "studies": 0, "participants": 0, "effectSize": "No human longevity trials yet" }
+    ],
+    "dosing": {
+      "standard": "1-3g/day",
+      "research": "Up to 6g/day in exercise studies",
+      "perKg": null,
+      "timing": "Any time, often pre-workout",
+      "withFood": false,
+      "notes": "The Science 2023 paper used ~1000mg/kg/day in mice. Human-equivalent unclear. 1-3g/day is reasonable extrapolation."
+    },
+    "safety": {
+      "rating": "Excellent",
+      "sideEffects": ["Generally none at recommended doses"],
+      "contraindications": ["None established"],
+      "upperLimit": "6g/day used safely in studies"
+    },
+    "relatedArticles": ["taurine-longevity-science"],
+    "tags": ["longevity", "cardiovascular", "performance", "amino-acid"]
+  },
+  {
+    "id": "protein-whey",
+    "name": "Whey Protein",
+    "slug": "whey-protein",
+    "category": "Performance",
+    "description": "Complete protein with high leucine content. Gold standard for muscle protein synthesis stimulation. Isolate vs concentrate affects purity and lactose content.",
+    "effects": [
+      { "area": "Muscle Protein Synthesis", "level": "strong", "studies": 50, "participants": 3000, "effectSize": "Superior MPS stimulation vs plant proteins" },
+      { "area": "Muscle Mass (with training)", "level": "strong", "studies": 30, "participants": 2000, "effectSize": "0.5-1kg additional lean mass over 12 weeks" },
+      { "area": "Satiety", "level": "moderate", "studies": 10, "participants": 500, "effectSize": "Increased satiety vs carbohydrate meals" },
+      { "area": "Recovery", "level": "moderate", "studies": 15, "participants": 800, "effectSize": "Reduced DOMS and faster recovery markers" }
+    ],
+    "dosing": {
+      "standard": "20-40g per serving",
+      "perKg": 0.4,
+      "timing": "Within 2h of training, or any meal to hit protein target",
+      "withFood": false,
+      "notes": "Total daily protein (1.6-2.2g/kg) matters more than timing. Leucine threshold ~2.5g per serving for MPS."
+    },
+    "safety": {
+      "rating": "Excellent",
+      "sideEffects": ["GI discomfort in lactose-intolerant (use isolate)", "Bloating at high doses"],
+      "contraindications": ["Milk allergy"],
+      "upperLimit": "No established upper limit for protein"
+    },
+    "relatedArticles": ["protein-powder-guide", "whey-protein-gold-standard-analysis"],
+    "tags": ["protein", "muscle", "performance", "recovery"]
+  }
+]
