@@ -7,16 +7,17 @@ export const SITE_NAME = "Supplement Guide";
 export const navigation = [
   { name: "Articles", href: "/blog" },
   { name: "Supplements", href: "/supplements" },
-  { name: "Research", href: "/research" },
+  { name: "Protocols", href: "/protocols" },
+  { name: "Tools", href: "/tools" },
   { name: "About", href: "/about" },
 ];
 
 export const footerPages = [
   { name: "Articles", href: "/blog" },
   { name: "Supplement Database", href: "/supplements" },
+  { name: "Protocols", href: "/protocols" },
   { name: "Interaction Checker", href: "/tools/interaction-checker" },
-  { name: "Dosage Calculator", href: "/tools/dosage-calculator" },
-  { name: "Research", href: "/research" },
-  { name: "Our Research Process", href: "/methodology" },
+  { name: "Protocol Builder", href: "/tools/protocol-builder" },
+  { name: "Our Methodology", href: "/methodology" },
   { name: "About", href: "/about" },
 ];
