@@ -6,6 +6,7 @@ import ArticleCard from "@/components/ArticleCard";
 import NewsletterForm from "@/components/NewsletterForm";
 import CategoryGrid from "@/components/CategoryGrid";
 import protocols from "@/data/protocols.json";
+import conditions from "@/data/conditions.json";
 
 export const revalidate = 3600;
 
@@ -123,6 +124,59 @@ export default async function Home() {
           </div>
         </section>
       )}
+
+      {/* Browse by Health Goal */}
+      <section className="py-20 bg-white border-y border-zinc-100">
+        <div className="max-w-[1400px] mx-auto px-4 md:px-8">
+          <FadeIn>
+            <div className="flex items-baseline justify-between mb-8">
+              <div>
+                <h2 className="font-serif text-2xl font-semibold text-zinc-900 tracking-tight">
+                  Browse by Health Goal
+                </h2>
+                <p className="text-sm text-zinc-500 mt-1">
+                  What are you trying to improve? See the evidence for each condition.
+                </p>
+              </div>
+              <Link href="/conditions" className="hidden sm:block text-sm text-zinc-400 hover:text-zinc-900 transition-colors shrink-0 ml-8">
+                View all
+              </Link>
+            </div>
+          </FadeIn>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            {conditions.map((c) => {
+              const strongCount = c.supplements.filter((s) => s.evidence === "strong").length;
+              const totalCount = c.supplements.length;
+              return (
+                <Link
+                  key={c.slug}
+                  href={`/conditions/${c.slug}`}
+                  className="group bg-zinc-50 border border-zinc-200 rounded-xl p-4 hover:border-emerald-200 hover:bg-emerald-50/30 transition-all"
+                >
+                  <div className="text-2xl mb-2">{c.icon}</div>
+                  <div className="font-semibold text-zinc-900 text-sm leading-tight group-hover:text-emerald-700 transition-colors mb-1">
+                    {c.name}
+                  </div>
+                  <div className="flex items-center gap-2 text-xs text-zinc-400 mt-2">
+                    <span>{totalCount} supplements</span>
+                    {strongCount > 0 && (
+                      <>
+                        <span>·</span>
+                        <span className="text-emerald-600 font-medium">{strongCount} strong evidence</span>
+                      </>
+                    )}
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+          <div className="mt-4 sm:hidden text-center">
+            <Link href="/conditions" className="text-sm text-zinc-400 hover:text-zinc-900 transition-colors">
+              View all conditions →
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* Protocol Analysis Section */}
       <section className="py-20 bg-zinc-50 border-y border-zinc-100">

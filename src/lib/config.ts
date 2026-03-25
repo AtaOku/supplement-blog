@@ -12,7 +12,6 @@ export const navigation = [
   { name: "Conditions", href: "/conditions" },
   { name: "Protocols", href: "/protocols" },
   { name: "Tools", href: "/tools" },
-  { name: "About", href: "/about" },
 ];
 
 export const footerPages = [
