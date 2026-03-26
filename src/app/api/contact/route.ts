@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
       parent: { database_id: DB_ID },
       properties: {
         Name: { title: [{ text: { content: name } }] },
-        Email: { email: { email } },
+        Email: { email },
         Subject: { select: { name: "Website Contact" } },
         Status: { select: { name: "New" } },
       },
