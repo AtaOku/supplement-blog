@@ -11,13 +11,14 @@ export default function NewsletterForm() {
     e.preventDefault();
     setStatus("submitting");
 
-    // TODO: Replace with actual newsletter API endpoint
-    // Example: await fetch("/api/newsletter", { method: "POST", body: JSON.stringify({ email }) })
-    // For now, we store in localStorage as a placeholder and show honest messaging
     try {
-      const existing = JSON.parse(localStorage.getItem("newsletter_signups") || "[]");
-      existing.push({ email, date: new Date().toISOString() });
-      localStorage.setItem("newsletter_signups", JSON.stringify(existing));
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      if (!res.ok) throw new Error("Failed");
       setStatus("success");
       setEmail("");
     } catch {
@@ -30,15 +31,15 @@ export default function NewsletterForm() {
       {status === "success" ? (
         <div className="flex items-center gap-3 text-emerald-600 animate-fade-in">
           <CheckCircle size={24} weight="fill" />
-          <span className="font-medium">Thanks! We&apos;ll notify you when the newsletter launches.</span>
+          <span className="font-medium">You&apos;re on the list. We&apos;ll be in touch.</span>
         </div>
       ) : (
         <div>
           <h3 className="text-lg font-semibold text-zinc-900 mb-1 tracking-tight">
-            Get notified when we launch
+            Stay up to date
           </h3>
           <p className="text-sm text-zinc-500 mb-5">
-            We&apos;re building our newsletter. Leave your email to be the first to know.
+            New research reviews and supplement guides — straight to your inbox. No spam.
           </p>
 
           <form onSubmit={handleSubmit} className="flex gap-2">
@@ -56,7 +57,7 @@ export default function NewsletterForm() {
               className="inline-flex items-center gap-2 bg-zinc-900 text-white px-5 py-2.5 rounded-xl text-sm font-medium hover:bg-zinc-800 active:scale-[0.98] transition-all disabled:opacity-50"
             >
               <PaperPlaneTilt size={16} weight="fill" />
-              {status === "submitting" ? "..." : "Notify Me"}
+              {status === "submitting" ? "..." : "Subscribe"}
             </button>
           </form>
           {status === "error" && (

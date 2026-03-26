@@ -23,4 +23,5 @@ export const footerPages = [
   { name: "Protocol Builder", href: "/tools/protocol-builder" },
   { name: "Our Methodology", href: "/methodology" },
   { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
 ];
