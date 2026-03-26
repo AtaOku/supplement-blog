@@ -47,7 +47,7 @@ export function organizationJsonLd() {
       "Independent, science-based supplement resource covering performance, longevity, cognition, and metabolic health.",
     contactPoint: {
       "@type": "ContactPoint",
-      email: "hello@supplementstack.space",
+      url: `${BASE_URL}/contact`,
       contactType: "editorial",
     },
     sameAs: [

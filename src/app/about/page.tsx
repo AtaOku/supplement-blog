@@ -193,7 +193,7 @@ export default function AboutPage() {
         <h2>Contact</h2>
         <p>
           For editorial questions, corrections, or partnership enquiries:{" "}
-          <a href="mailto:hello@supplementstack.space">hello@supplementstack.space</a>
+          <a href="/contact">use our contact form</a>.
         </p>
       </div>
     </div>

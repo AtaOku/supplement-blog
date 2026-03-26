@@ -38,7 +38,7 @@ export default function ConditionsPage() {
           </h1>
           <p className="text-base text-zinc-500 leading-relaxed max-w-xl">
             Not all supplements work for all goals. We map the clinical evidence to specific health
-            conditions — so you can find what's actually studied for your needs.
+            conditions — so you can find what&apos;s actually studied for your needs.
           </p>
         </div>
       </section>
@@ -85,7 +85,7 @@ export default function ConditionsPage() {
         <div className="mt-10 bg-zinc-50 border border-zinc-200 rounded-xl p-6 text-center">
           <p className="text-sm text-zinc-500 mb-2">Missing a condition?</p>
           <p className="text-xs text-zinc-400">
-            Email us at hello@supplementstack.space — we add new condition guides based on requests.
+            <a href="/contact" className="text-emerald-600 hover:underline">Send us a request</a> — we add new condition guides based on reader feedback.
           </p>
         </div>
       </div>

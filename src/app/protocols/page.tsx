@@ -80,7 +80,7 @@ export default function ProtocolsPage() {
         <div className="mt-10 bg-zinc-50 border border-zinc-200 rounded-xl p-6 text-center">
           <p className="text-sm text-zinc-500 mb-2">Want us to analyze a protocol?</p>
           <p className="text-xs text-zinc-400">
-            Email us at hello@supplementstack.space with the protocol details.
+            <a href="/contact" className="text-emerald-600 hover:underline">Send us the details</a> and we&apos;ll run the evidence analysis.
           </p>
         </div>
       </div>
